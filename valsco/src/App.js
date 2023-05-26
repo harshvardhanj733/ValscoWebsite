@@ -1,10 +1,9 @@
-import { Load } from './components/LoadingPage';
-// import  Book  from './components/Book';
+import { LoadingPage } from './components/LoadingPage';
 
 function App() {
   return (
     <div>
-      <Load />
+      <LoadingPage />
     </div>
   );
 }

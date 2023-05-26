@@ -1,50 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import './LoadingPage.css';
-import Book from './Book';
+import React, { useEffect, useState } from "react"
+import "./LoadingPage.css"
+import LandingPage from "./LandingPage"
 
-export const Load = () => {
-  const [isLoadingComplete, setIsLoadingComplete] = useState(false);
+export const LoadingPage = () => {
+  const [isLoadingComplete, setIsLoadingComplete] = useState(false)
 
   useEffect(() => {
     const boxNone = () => {
-      let box = document.getElementsByClassName('box')[0];
+      let box = document.getElementsByClassName("box")[0]
       if (box) {
-        box.style.display = 'none';
-        let text = document.getElementsByClassName('text')[0];
-        text.style.display = 'flex';
-        text.style.flexWrap = 'wrap';
+        box.style.display = "none"
+        let text = document.getElementsByClassName("text")[0]
+        text.style.display = "flex"
+        text.style.flexWrap = "wrap"
       }
-    };
+    }
 
     const allDis = () => {
-      let text = document.getElementsByClassName('text')[0];
+      let text = document.getElementsByClassName("text")[0]
       if (text) {
-        text.classList.add('pos');
+        text.classList.add("pos")
       }
-    };
+    }
 
     const showOneByOne = () => {
-      let hide = document.getElementsByClassName('hide');
-      let counter = 0;
+      let hide = document.getElementsByClassName("hide")
+      let counter = 0
 
       const showNext = () => {
         if (hide && counter < hide.length) {
-          hide[counter].classList.add('show' + counter);
-          counter++;
-          setTimeout(showNext, 600);
+          hide[counter].classList.add("show" + counter)
+          counter++
+          setTimeout(showNext, 600)
         }
-      };
+      }
 
-      showNext();
+      showNext()
       setTimeout(() => {
-        setIsLoadingComplete(true);
-      }, 2000);
-    };
+        setIsLoadingComplete(true)
+      }, 2000)
+    }
 
-    setTimeout(boxNone, 820);
-    setTimeout(allDis, 1500);
-    setTimeout(showOneByOne, 1000);
-  }, []);
+    setTimeout(boxNone, 820)
+    setTimeout(allDis, 1500)
+    setTimeout(showOneByOne, 1000)
+  }, [])
 
   return (
     <div>
@@ -63,8 +63,8 @@ export const Load = () => {
           </div>
         </>
       ) : (
-        <Book className={isLoadingComplete ? 'show' : 'hide'} />
+        <LandingPage className={isLoadingComplete ? "show" : "hide"} />
       )}
     </div>
-  );
-};
+  )
+}
