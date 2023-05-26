@@ -1,10 +1,16 @@
 import { LoadingPage } from './components/LoadingPage';
+import Slide from './components/ProductsPage';
+import { Route,Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <LoadingPage />
-    </div>
+    // <Routes>
+    //   <Route path="/" element={ <LoadingPage/> } ></Route> 
+    // </Routes>
+
+    // <LoadingPage/>
+    <Slide/>
+ 
   );
 }
 
