@@ -1,17 +1,19 @@
-import { LoadingPage } from './components/LoadingPage';
-import Slide from './components/ProductsPage';
-import { Route,Routes } from 'react-router-dom'
+import { LoadingPage } from "./components/Loading/LoadingPage"
+import ProductsPage from "./components/Products/ProductsPage"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
-    // <Routes>
-    //   <Route path="/" element={ <LoadingPage/> } ></Route> 
-    // </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoadingPage />}></Route>
+        <Route path="/products" element={<ProductsPage />}></Route>
+      </Routes>
+    </Router>
 
     // <LoadingPage/>
-    <Slide/>
- 
-  );
+    // <Slide/>
+  )
 }
 
-export default App;
+export default App
