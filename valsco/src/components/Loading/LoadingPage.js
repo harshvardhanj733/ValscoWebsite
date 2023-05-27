@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./LoadingPage.css"
-import LandingPage from "./LandingPage"
+import LandingPage from "../Landing/LandingPage"
 
 export const LoadingPage = () => {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false)

@@ -1,6 +1,7 @@
 import "./LandingPage.css"
 import React from "react"
-import imgvalsco from './images/img2.png'
+import imgvalsco from '../images/img2.png'
+import { Link } from "react-router-dom"
 
 function LandingPage() {
   return (
@@ -43,6 +44,7 @@ function LandingPage() {
                       </div>
                       <div className="col-1 offset-3 a" id="home">
                         <div className="btn-group dropend">
+                        <Link to={"/"}>
                           <button
                             type="button"
                             className="btn btn dropdown"
@@ -52,10 +54,12 @@ function LandingPage() {
                           >
                             Home
                           </button>
+                          </Link>
                         </div>
                       </div>
                       <div className="col-1 a">
                         <div className="btn-group dropend">
+                        <Link to={"/products"}>
                           <a
                             href="#productsrow2"
                             className="btn btn-info"
@@ -64,6 +68,7 @@ function LandingPage() {
                           >
                             Products
                           </a>
+                          </Link>
                         </div>
                       </div>
                       <div className="col-1 a">
@@ -107,7 +112,7 @@ function LandingPage() {
               </p>
             </div>
             <div className="img">
-              <img src={require("../components/images/logob.png")} alt="gb" />
+              <img src={require("../../components/images/logob.png")} alt="gb" />
             </div>
           </div>
         </div>

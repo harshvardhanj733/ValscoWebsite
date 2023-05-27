@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './ProductsPage.css';
+import styles from './ProductsPage.module.css';
 
 let obj = [{
   img: "https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
@@ -57,8 +57,8 @@ const Slide = () => {
   const small = (id) => {
     const ld = document.getElementsByClassName('one')[1];
     const rd = document.getElementsByClassName('rights')[0];
-    ld.classList.add('leftd');
-    rd.classList.add('rightd');
+    ld?.classList?.add('leftd');
+    rd?.classList?.add('rightd');
 
     if (id === 0) {
       setTimeout(previ, 700);
@@ -85,7 +85,7 @@ const Slide = () => {
       nex.src = obj[currPointer + 1].img;
     }
 
-    setTimeout(up, 200);
+    // setTimeout(up, 200);
   };
 
   const up = () => {
@@ -115,29 +115,29 @@ const Slide = () => {
       ph.src = obj[currPointer - 1].img;
     }
 
-    setTimeout(up, 200);
+    // setTimeout(up, 200);
   };
 
   return (
     <>
-      <div className="product">
+      <div className={styles.product}>
         <h2>Products</h2>
       </div>
-      <div className="full">
-        <div className="one">
+      <div className={styles.full}>
+        <div className={styles.one}>
           <img
             src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
             alt=""
           />
         </div>
-        <div id="test" className="one leftd" onClick={() => small(0)}>
+        <div id="test" className={`${styles.one} ${styles.leftd}`} onClick={() => small(0)}>
           <img
             id="ph"
             src="https://images.unsplash.com/photo-1505664063603-28e48ca204eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt=""
           />
         </div>
-        <div id="up" className="text">
+        <div id="up" className={styles.text}>
           <a href="https://www.youtube.com/">
             <img
               id="cen"
@@ -146,14 +146,14 @@ const Slide = () => {
             />
           </a>
         </div>
-        <div className="rights">
+        <div className={styles.rights}>
           <img
             id="nex"
             src="https://images.unsplash.com/photo-1528747008803-f9f5cc8f1a64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGxhd3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
             alt=""
           />
         </div>
-        <div className="rights">
+        <div className={styles.rights}>
           <img
             src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             alt=""
@@ -161,10 +161,10 @@ const Slide = () => {
         </div>
       </div>
 
-      <button className="prev" type="button" onClick={() => small(0)}>
+      <button className={styles.prev} type="button" onClick={() => small(0)}>
         &lt;
       </button>
-      <button className="next" type="button" onClick={() => small(1)}>
+      <button className={styles.next} type="button" onClick={() => small(1)}>
         &gt;
       </button>
     </>
