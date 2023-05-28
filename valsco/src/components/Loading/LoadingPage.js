@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./LoadingPage.css"
 import LandingPage from "../Landing/LandingPage"
 
+
 export const LoadingPage = () => {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false)
 
@@ -47,6 +48,7 @@ export const LoadingPage = () => {
   }, [])
 
   return (
+    <>
     <div>
       {!isLoadingComplete ? (
         <>
@@ -66,5 +68,7 @@ export const LoadingPage = () => {
         <LandingPage className={isLoadingComplete ? "show" : "hide"} />
       )}
     </div>
+    
+    </>
   )
 }
