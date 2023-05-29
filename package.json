@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "firestore": "^1.1.6",
+    "swiper": "^9.3.2"
+  }
+}
