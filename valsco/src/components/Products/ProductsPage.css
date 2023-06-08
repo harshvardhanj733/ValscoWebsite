@@ -1,0 +1,163 @@
+@media screen and (min-width: 900px) and (max-width:2000px) {
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+    }
+
+    .main h2 {
+        margin-top: 0px;
+        font-size: 75px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'Geologica', sans-serif;
+        color: #212A3E;
+    }
+
+    .main {
+        height: 100vh;
+    }
+
+    .main1 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        .swiper {
+            width: 650px;
+            height: 500px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-weight: bold;
+        }
+
+    }
+
+
+    .main1 img {
+        width: 650px;
+        height: 500px;
+
+    }
+
+
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+    }
+
+
+    .main h2 {
+        margin-top: 0px;
+        font-size: 75px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'Geologica', sans-serif;
+        color: #212A3E;
+    }
+
+    .main {
+        height: 100vh;
+    }
+
+    .main1 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        .swiper {
+
+            width: 380px;
+            height: 450px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+
+        }
+
+    }
+
+
+    .main1 img {
+        width: 380px;
+        height: 450px;
+
+    }
+}
+
+
+@media screen and (max-width:399px) {
+
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+    }
+
+    .main h2 {
+        margin-top: 0px;
+        font-size: 75px;
+        text-align: center;
+        padding-top: 10px;
+        font-family: 'Geologica', sans-serif;
+        color: #212A3E;
+    }
+
+    .main {
+        height: 100vh;
+    }
+
+    .main1 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        .swiper {
+
+            width: 250px;
+            height: 350px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+
+        }
+
+    }
+
+    .main1 img {
+        width: 250px;
+        height: 350px;
+
+    }
+
+}

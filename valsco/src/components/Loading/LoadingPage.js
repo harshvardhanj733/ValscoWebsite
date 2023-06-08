@@ -39,7 +39,7 @@ export const LoadingPage = () => {
       showNext()
       setTimeout(() => {
         setIsLoadingComplete(true)
-      }, 2000)
+      }, 3500)
     }
 
     setTimeout(boxNone, 820)
