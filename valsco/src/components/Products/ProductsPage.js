@@ -119,7 +119,7 @@ const Slide = () => {
   };
 
   return (
-    <>
+    <div className="g">
       <div className={styles.product}>
         <h2>Products</h2>
       </div>
@@ -167,7 +167,7 @@ const Slide = () => {
       <button className={styles.next} type="button" onClick={() => small(1)}>
         &gt;
       </button>
-    </>
+    </div>
   );
 };
 

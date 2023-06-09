@@ -51,7 +51,7 @@ export const LoadingPage = () => {
     <>
     <div>
       {!isLoadingComplete ? (
-        <>
+        <div className="plan">
           <div className="box">
             <video src="tv.mp3"></video>
           </div>
@@ -63,7 +63,7 @@ export const LoadingPage = () => {
             <span className="hide">C</span>
             <span className="hide">O</span>
           </div>
-        </>
+        </div>
       ) : (
         <LandingPage className={isLoadingComplete ? "show" : "hide"} />
       )}

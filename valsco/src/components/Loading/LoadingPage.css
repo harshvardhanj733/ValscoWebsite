@@ -21,6 +21,10 @@ body {
   /* animation-fill-mode: forwards; */
 }
 
+.plan{
+  overflow-y: hidden;
+}
+
 @keyframes slideIn {
   0% {
     opacity: 0;
