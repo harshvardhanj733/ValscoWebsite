@@ -19,7 +19,7 @@ const Blog = (currentElement,authenticated) => {
 }
 
   return (
-    <>
+    <div id="g">
     <section className='d-flex flex-column align-items-center blog-card border border-dark p-3 m-3 text-center'>
       <img src="./logo.png" id='valsco-logo'/>
       <h3>{title}</h3>
@@ -30,7 +30,7 @@ const Blog = (currentElement,authenticated) => {
       {authenticated && auth.currentUser && auth.currentUser.uid==author.id && <button className="btn btn-outline-danger ms-2" onClick={()=>deleteBlog(id)}>Delete blog</button>}
       </div>
     </section>
-    </>
+    </div>
   )
 }
 
