@@ -143,6 +143,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", en
       margin-left: 200%;
   }
   .heading{
+      color: black;
       font-size: large;
   }
   .up{
@@ -245,7 +246,7 @@ transform: scale(1.0);
   padding-bottom: 10%;
 }
 .heading {
-  padding-top: 5px;
+  color: black;
   font-weight: bold;
   font-size: 20px;
 }
