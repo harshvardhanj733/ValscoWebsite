@@ -10,96 +10,122 @@ function LandingPage() {
         <div className="wrapper">
           <div className="main">
             <div className="container-fluid">
-              <div className="animate_animated animate_slideInDown" id="top">
-                <div className="row" id="row1">
-                  <div className="collapse" id="navbarToggleExternalContent">
-                    {/* Commented out content */}
-                  </div>
-                  <nav
-                    className="navbar navbar-white bg-white"
-                    style={{ backgroundColor: "transparent" }}
-                  >
-                    <div className="container-fluid">
-                      <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggleExternalContent"
-                        aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
+            <div className="animate_animated animate_slideInDown" id="top">
+              <div className="row" id="row1">
+                <div className="collapse" id="navbarToggleExternalContent">
+                  <div className="bg-white p-3">
+                    <button
+                      type="button"
+                      className="btn btn dropdown"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      id="homeb"
+                    >
+                      Home
+                    </button>
+                    <div className="btn-group dropend">
+                      <a
+                        href="#productsrow2"
+                        className="btn btn-info"
+                        role="button"
+                        id="productsb"
+                        >Products</a
                       >
-                        <span className="navbar-toggler-icon"></span>
-                      </button>
+                    </div>
+                    <div className="btn-group dropend">
+                      <a
+                        href="#productsrow2"
+                        className="btn btn-info"
+                        role="button"
+                        id="aboutusb"
+                        >About us</a
+                      >
+                    </div>
+                    <div className="btn-group dropend">
+                      <a
+                        href="#contactusrow2"
+                        className="btn btn-info"
+                        role="button"
+                        id="contactus"
+                        >Contact Us</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <nav className="navbar navbar-white bg-white">
+                  <div className="container-fluid">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarToggleExternalContent"
+                      aria-controls="navbarToggleExternalContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon"></span>
+                    </button>
 
-                      <div className="col-1 up" id="coll">
-                        <img
-                          src="WhatsApp Image 2023-05-24 at 23.23.16.jpg"
-                          id="tl"
-                          alt="tl"
-                        />
-                      </div>
-                      <div className="col-md-3 up">
-                        <div className="heading">Valsco Solutions</div>
-                      </div>
-                      <div className="col-1 offset-3 a" id="home">
-                        <div className="btn-group dropend">
-                        <Link to={"/"}>
-                          <button
-                            type="button"
-                            className="btn btn dropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            id="homeb"
-                          >
-                            Home
-                          </button>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-1 a">
-                        <div className="btn-group dropend">
-                        <Link to={"/products"}>
-                          <a
-                            href="#productsrow2"
-                            className="btn btn-info"
-                            role="button"
-                            id="productsb"
-                          >
-                            Products
-                          </a>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="col-1 a">
-                        <div className="btn-group dropend">
-                          <a
-                            href="#productsrow2"
-                            className="btn btn-info"
-                            role="button"
-                            id="aboutusb"
-                          >
-                            About us
-                          </a>
-                        </div>
-                      </div>
-                      <div className="col-1 a">
-                        <div className="btn-group dropend">
-                          <a
-                            href="#contactusrow2"
-                            className="btn btn-info"
-                            role="button"
-                            id="contactus"
-                          >
-                            Contact Us
-                          </a>
-                        </div>
+                    <div className="col-1 up" id="coll">
+                      <img src={require("../../components/images/newlogo.png")} id="tl" alt="Logo" />
+                    </div>
+                    <div className="col-md-3 up">
+                      <div className="heading">
+                        Valsco Technology
                       </div>
                     </div>
-                  </nav>
-                </div>
+                    <div className="col-1 offset-3 a" id="home">
+                      <div className="btn-group dropend">
+                        <button
+                          type="button"
+                          className="btn btn dropdown"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                          id="homeb"
+                        >
+                          Home
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-1 a">
+                      <div className="btn-group dropend">
+                        <a
+                          href="#productsrow2"
+                          className="btn btn-info"
+                          role="button"
+                          id="productsb"
+                          >Products</a
+                        >
+                      </div>
+                    </div>
+                    <div className="col-1 a">
+                      <div className="btn-group dropend">
+                        <a
+                          href="#productsrow2"
+                          className="btn btn-info"
+                          role="button"
+                          id="aboutusb"
+                          >About us</a
+                        >
+                      </div>
+                    </div>
+                    <div className="col-1 a">
+                      <div className="btn-group dropend">
+                        <a
+                          href="#contactusrow2"
+                          className="btn btn-info"
+                          role="button"
+                          id="contactus"
+                          >Contact Us</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </nav>
               </div>
             </div>
+          </div>
+
           
           <div className="front">
             <div className="para">
@@ -112,7 +138,7 @@ function LandingPage() {
               </p>
             </div>
             <div className="img">
-              <img src={require("../../components/images/logob.png")} alt="gb" />
+              <img src={require("../../components/images/newlogo.png")} alt="gb" />
             </div>
           </div>
         </div>

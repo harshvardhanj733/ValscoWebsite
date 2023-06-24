@@ -110,7 +110,7 @@ function Contact() {
                 placeholder="Your Company/Organisation"
               />
             </div>
-            <button type="submit" className="btn btn-primary transparent-button">
+            <button type="submit" className="btn btn-primary transparent-button" id = "buton">
               Click to send your message
             </button>
           </form>
@@ -120,7 +120,7 @@ function Contact() {
         <h1 id="ide">Have an Idea?</h1>
         <h1 id="tell">Tell us about It!</h1>
         <div className="privacy">
-          <p1>valsco@gmail.com</p1>
+          <p1>valscotech@gmail.com</p1>
           <p2>636 Broughton St</p2>
           <p2>Vancouver, BC V6G 3K3</p2>
           <p4>Privacy Policy</p4>
@@ -144,3 +144,4 @@ function Contact() {
 
 
 export default Contact;
+
