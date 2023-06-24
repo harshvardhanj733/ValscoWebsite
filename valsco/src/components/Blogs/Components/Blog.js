@@ -2,8 +2,11 @@ import React , {useState} from 'react'
 import {auth ,  db} from "../firebase-config";
 import { collection , getDocs ,deleteDoc, doc } from "firebase/firestore";
 import { Link } from 'react-router-dom';
-import "../../Blogs/Blogs.css";
-const Blog = (currentElement,authenticated) => {
+// import "../../Blogs/Blogs.css";
+import "./StyleBlog.css";
+
+// import logoimg from "../../images/logo.png";
+const Blog = (currentElement,authenticated , setAlertMsg, setAlertColor) => {
 
 
   console.log(authenticated);
@@ -16,21 +19,27 @@ const Blog = (currentElement,authenticated) => {
     const blogdelete = doc(db,"blogPosts",id);
     await deleteDoc(blogdelete);
     window.location.reload(false);
+
+    localStorage.setItem("alertMsg","Your Blog has been successfully deleted!");
+    setAlertMsg("Your Blog has been successfully deleted!");
+
+    localStorage.setItem("alertColor","lightgreen");
+    setAlertColor("lightgreen");
 }
 
   return (
-    <div id="g">
-    <section className='d-flex flex-column align-items-center blog-card border border-dark p-3 m-3 text-center'>
-      <img src="./logo.png" id='valsco-logo'/>
-      <h3>{title}</h3>
-      <p>{postText.slice(0,200)}...</p>
-      <p className='fw-bold'>@{author.name}</p>
-      <div>
-      <Link to={`/DetailedBlog/${id}`} className='btn btn-outline-success me-2'>Read Blog</Link>
-      {authenticated && auth.currentUser && auth.currentUser.uid==author.id && <button className="btn btn-outline-danger ms-2" onClick={()=>deleteBlog(id)}>Delete blog</button>}
+    <>
+    <section className='blog-card'>
+      <img src={require("../../../components/images/blog-logo.png")} id='valsco-logo'/>
+      <h4 className='blog-card-title'>{title}</h4>
+      <p className='blog-card-desc'>{postText.slice(0,180)}...</p>
+      <p className='blog-card-author'>@{author.name}</p>
+      <div className='blog-card-btn-div'>
+      <Link to={`/DetailedBlog/${id}`} className='blog-card-read-btn'>Read Blog</Link>
+      {authenticated && auth.currentUser && auth.currentUser.uid==author.id && <button className="blog-card-delete-btn" onClick={()=>deleteBlog(id)}>Delete blog</button>}
       </div>
     </section>
-    </div>
+    </>
   )
 }
 

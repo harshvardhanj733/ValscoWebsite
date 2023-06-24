@@ -6,7 +6,8 @@ import "swiper/swiper.min.css";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import { Link } from "react-router-dom";
-import "../../Blogs/Blogs.css";
+// import "../../Blogs/Blogs.css";
+import "./StyleBlog.css";
 import { useBlogContext } from "../context/BlogContext";
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
@@ -16,14 +17,7 @@ export default function Slider({ authenticated }) {
 
   if (isLoading === true) {
     return (
-      <div className="loader d-flex flex-column align-items-center justify-content-center my-5">
-        <div className="p-4 border rounded-circle shadow">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
-        <span className="mt-4 fw-bold">... Loading ...</span>
-      </div>
+      <div className="loader"><div className="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     );
   }
 
@@ -41,28 +35,28 @@ export default function Slider({ authenticated }) {
           grabCursor={true}
           centeredSlides={true}
           slidesPerView={"auto"}
-          EffectCoverflow={{
+          coverflowEffect={{
             rotate: 50,
             stretch: 0,
-            depth: 100,
-            modifier: 5,
-            slideShadows: true,
-          }}
+            depth: 150,
+            modifier: 1,
+            slideShadows: false
+          }}
           pagination={false}
           className="mySwiper"
         >
           {blogs.map((currentElement) => {
             return (
               <SwiperSlide className="swiperslide">
-                <section className="d-flex flex-column align-items-center blog-card border border-dark p-3 m-2 swiper-slide">
-                  <img src="./logo.png" id="valsco-logo" />
-                  <h3>{currentElement.title}</h3>
-                  <p>{currentElement.postText.slice(0, 200)}...</p>
-                  <p className="fw-bold">@{currentElement.author.name}</p>
+                <section className="swiper-slide-card">
+                  <img src={require("../../../components/images/blog-logo.png")} id="valsco-logo" />
+                  <h3 className="swiper-slide-title">{currentElement.title}</h3>
+                  <p className="swiper-slide-desc">{currentElement.postText.slice(0, 250)}...</p>
+                  <p className="swiper-slide-author">@{currentElement.author.name}</p>
                   <div>
                     <Link
                       to={`/DetailedBlog/${currentElement.id}`}
-                      className="btn btn-outline-success me-2"
+                      className="blog-card-read-btn"
                     >
                       Read Blog
                     </Link>
@@ -70,7 +64,7 @@ export default function Slider({ authenticated }) {
                       auth.currentUser &&
                       auth.currentUser.uid == currentElement.author.id && (
                         <button
-                          className="btn btn-outline-danger ms-2"
+                          className="blog-card-delete-btn"
                           onClick={() => deleteBlog(currentElement.id)}
                         >
                           Delete blog
@@ -82,7 +76,7 @@ export default function Slider({ authenticated }) {
             );
           })}
         </Swiper>
-        <p className="text-center my-5">...Drag to swipe the blog cards...</p>
+        <p className="slider-instruct">...Drag to swipe the blog cards...</p>
       </div>
     </>
   );

@@ -18,10 +18,10 @@ const HoverImage = () => {
       );
     };
 
-    containerRef.current.addEventListener('mousemove', handleMouseMove);
+    containerRef.current?.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      containerRef.current.removeEventListener('mousemove', handleMouseMove);
+      containerRef.current?.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
