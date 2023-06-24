@@ -10,92 +10,30 @@ import DetailedBlog from './components/Blogs/Components/DetailedBlog';
 import Slider from './components/Blogs/Components/Slider';
 import Contact from './components/Contact/Contact';
 import LandingPage from './components/Landing/LandingPage';
+import Hoverimage from './components/hoverImage/Hoverimage';
+import Alert from "./components/Blogs/Components/Alert";
 
 function App() {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
 
+  const [alertMsg,setAlertMsg] = useState(localStorage.getItem("alertMsg"));
+  const [alertColor,setAlertColor] = useState(localStorage.getItem("alertColor"));
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoadingComplete(true);
-    }, 2000);
+    }, 4000);
   }, []);
 
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              {!isLoadingComplete ? (
-                <LoadingPage />
-              ) : (
-                <>
-                  <div>
-                  <LandingPage/>
-                    <ProductsPage />
-                    <Slider authenticated={authenticated} />
-                    <Contact />
-                  </div>
-                  <Routes>
-                  <Route
-                    path="/BlogHome"
-                    element={
-                      <>
-                        <Navbar
-                          authenticated={authenticated}
-                          setAuthenticated={setAuthenticated}
-                        />
-                        <BlogHome authenticated={authenticated} />
-                      </>
-                    }
-                  />
-                  <Route
-                    path="/CreateBlog"
-                    element={
-                      <>
-                        <Navbar
-                          authenticated={authenticated}
-                          setAuthenticated={setAuthenticated}
-                        />
-                        <CreateBlog authenticated={authenticated} />
-                      </>
-                    }
-                  />
-                  <Route
-                    path="/Login"
-                    element={
-                      <>
-                        <Navbar
-                          authenticated={authenticated}
-                          setAuthenticated={setAuthenticated}
-                        />
-                        <Login
-                          setAuthenticated={setAuthenticated}
-                          authenticated={authenticated}
-                        />
-                      </>
-                    }
-                  />
-                  <Route
-                    path="/DetailedBlog/:ID"
-                    element={
-                      <>
-                        <Navbar
-                          authenticated={authenticated}
-                          setAuthenticated={setAuthenticated}
-                        />
-                        <DetailedBlog authenticated={authenticated} />
-                      </>
-                    }
-                  />
-                  </Routes>
-                </>
-              )}
-            </>
-          }
-        />
+        <Route path="/" element={<>{!isLoadingComplete ? (<LoadingPage />) : (<><div><LandingPage/><Hoverimage/><ProductsPage /><Slider authenticated={authenticated} /><Contact /> </div></>)}</>}/>
+        <Route path="/BlogHome" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><BlogHome authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
+        <Route path="/CreateBlog" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><CreateBlog authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
+        <Route path="/Login" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Login setAuthenticated={setAuthenticated} authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
+        <Route path="/DetailedBlog/:ID" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><DetailedBlog authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
       </Routes>
     </Router>
   );

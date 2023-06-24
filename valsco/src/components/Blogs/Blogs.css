@@ -1,8 +1,5 @@
 /* @import url("animate.css"); */
        
-#g{
-  margin-top: 100%;
-}
 #row1{
     width: 100%;
     padding-left: 10px;
@@ -213,6 +210,9 @@
     margin: 0;
     padding: 0;
   }
+  nav{
+    color: white;
+  }
   #login-img{
     width: 150px;
   }
@@ -301,8 +301,8 @@
     margin-left: 250px;
     max-width: 50%;
     height: 300px;
-  } 
-   */
+  }  */
+  
   /* .swiper-slide img {
     display: block;
     width: 30%;
