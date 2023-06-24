@@ -5,8 +5,9 @@ import { auth , db} from '../firebase-config';
 import {deleteDoc, doc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import "../../Blogs/Blogs.css";
+import "./StyleBlog.css";
 
-const DetailedBlog = ({authenticated}) => {
+const DetailedBlog = (props) => {
 
   let navigate = useNavigate();
   const [temp,setTemp]=useState(false);
@@ -22,27 +23,13 @@ const DetailedBlog = ({authenticated}) => {
   console.log(singleBlog);
   if(isSingleLoading===true)
   {
-    return <div className='loader d-flex flex-column align-items-center justify-content-center my-5'> 
-            <div className='p-4 border rounded-circle shadow'>
-            <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-            </div>
-            </div>
-            <span className='mt-4 fw-bold'>... Loading ...</span>
-            </div>
+    return <div className="loader"><div className="lds-ring"><div></div><div></div><div></div><div></div></div></div>
   }
 
   if(temp===true)
   {
     return (
-      <div className="loader d-flex flex-column align-items-center justify-content-center my-5">
-        <div className="p-4 border rounded-circle shadow">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
-        <span className="mt-4 fw-bold">... Deleting your blog ...</span>
-      </div>
+      <div className="loader"><div className="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     );
   }
 
@@ -53,17 +40,21 @@ const DetailedBlog = ({authenticated}) => {
     setTemp(false);
     navigate("/BlogHome");
     window.location.reload(false);
+    localStorage.setItem("alertMsg","Your Blog has been successfully deleted!");
+    props.setAlertMsg("Your Blog has been successfully deleted!");
+    localStorage.setItem("alertColor","lightgreen");
+    props.setAlertColor("lightgreen");
 }
 
 
   
   return (
     <>
-    <section className='detailed-blog text-center border-bottom my-3 border-success py-5 mx-5'>
-    <h1 className='py-3'>{title}</h1>
+    <section className='detailed-blog'>
+    <h1 className='detailed-blog-title'>{title}</h1>
     <p>{postText}</p>
-    {author && author.name && <p className='fw-bold'>@{author.name}</p>}
-    {authenticated && author && auth.currentUser && auth.currentUser.uid === author.id && <button className='btn btn-outline-danger' onClick={()=>deleteBlog(ID)}>Delete Blog</button>}
+    {author && author.name && <p className='detailed-blog-author'>@{author.name}</p>}
+    {props.authenticated && author && auth.currentUser && auth.currentUser.uid === author.id && <button className='blog-card-delete-btn' onClick={()=>deleteBlog(ID)}>Delete Blog</button>}
     </section>
     
     </>
