@@ -58,7 +58,6 @@
     transform: scale(1.02);
   }
   .bottom {
-    margin-top: 0%;
     background-color: black;
     color: silver;
   }
@@ -145,42 +144,69 @@
   }
   .b-form input {
     margin-right: 20%;
-    background: transparent;
+    background-color: black;
     outline: none;
     border: none;
     border-bottom: 2px solid silver;
     font-size: large;
+    color: white;
   }
   .b-form input:focus {
     background-color: transparent;
     color: white;
   }
+  .b-form input:hover{
+    background-color: transparent;
+    color: white;
+    border-bottom: 2px solid silver;
+  }
   .b-form .form-row {
     margin-top: 4%;
     font-size: larger;
   }
-  .b-form form button {
+  .b-form button {
     margin-top: 5%;
     margin-left: 30%;
     padding: 2% 2%;
-    padding-bottom: 4%;
     border-radius: 15px;
     font-size: 1.5vw;
     background: transparent;
     border: 2px solid silver;
     color: silver;
   }
+  #buton{
+    background: hsla(191, 75%, 60%, 1);
+    background: linear-gradient(
+      90deg,
+      hsla(191, 75%, 60%, 1) 0%,
+      hsla(248, 87%, 36%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      90deg,
+      hsla(191, 75%, 60%, 1) 0%,
+      hsla(248, 87%, 36%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      90deg,
+      hsla(191, 75%, 60%, 1) 0%,
+      hsla(248, 87%, 36%, 1) 100%
+    );
+    opacity: 0.90;
+  }
+  #buton:hover{
+    box-shadow: 5px 5px 10px black;
+    transform: scale(1.02);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4DC9E6", endColorstr="#210CAE", GradientType=1);
+    color: aliceblue;
+    transition: 1s, background-color 1s, color 1s, font-weight 1s,
+    border-radius 1s;
+  }
   .transparent-button {
     background: transparent;
     border: 2px solid silver;
     color: silver;
-  }
-  
-  .b-form button:hover {
-    background: transparent;
-    background-color: transparent;
-    border: silver;
-    box-shadow: 8px 4px silver;
   }
   
   /* $redColor: rgba(244,67,54,1);
