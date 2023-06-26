@@ -52,7 +52,7 @@ function LandingPage() {
                     </div>
                   </div>
                 </div>
-                <nav className="navbar navbar-white bg-white">
+                <nav className="navbar" id="pl">
                   <div className="container-fluid">
                     <button
                       className="navbar-toggler"
