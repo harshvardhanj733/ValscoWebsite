@@ -19,6 +19,17 @@ background: -webkit-linear-gradient(
 );
   opacity: 1;
 }
+/* #pl .container-fluid{
+  background-color: black;
+} */
+.navbar{
+  background-color: aliceblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2px;
+  box-shadow: 5px 5px 15px rgb(122, 205, 235);
+}
 #row1{
   width: 100%;
   padding-left: 10px;
@@ -34,7 +45,7 @@ background: -webkit-linear-gradient(
 }
 #homeb{
   font-size: 13px;
-   padding-left: 25px;
+  padding-left: 25px;
   padding-right: 25px;
   transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
 }
@@ -78,7 +89,9 @@ transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 
 }
 #productsb{
   font-size: 13px;
-  transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  transition: 0.5s, color 0s, font-weight 0.5s, border-radius 0.5s;
 }
 #productsb:hover{
 background: hsla(217, 100%, 50%, 1);
@@ -100,6 +113,8 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", en
 }
 #aboutusb{
   font-size: 13px;
+  background-color: aliceblue;
+  border: 1px solid grey;
   transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
 }
 #aboutusb:hover{
@@ -152,7 +167,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", en
   .navbar-toggler{
   display: contents;
 }
-#aboutusb:hover{
+/* #aboutusb:hover{
   background: hsla(217, 100%, 50%, 1);
 
   background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
@@ -165,7 +180,7 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", en
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );   color:aliceblue;
 font-weight: bold;
 transform: scale(1.0);
-}
+} */
 #productsb:hover{
 background: hsla(217, 100%, 50%, 1);
 
