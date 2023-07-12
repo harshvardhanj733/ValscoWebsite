@@ -6,10 +6,10 @@ import { Link } from "react-router-dom"
 function LandingPage() {
   return (
     <>
-    
-        <div className="wrapper">
-          <div className="main">
-            <div className="container-fluid">
+
+      <div className="wrapper">
+        <div className="main">
+          <div className="container-fluid">
             <div className="animate_animated animate_slideInDown" id="top">
               <div className="row" id="row1">
                 <div className="collapse" id="navbarToggleExternalContent">
@@ -29,7 +29,7 @@ function LandingPage() {
                         className="btn btn-info"
                         role="button"
                         id="productsb"
-                        >Products</a
+                      >Products</a
                       >
                     </div>
                     <div className="btn-group dropend">
@@ -38,7 +38,7 @@ function LandingPage() {
                         className="btn btn-info"
                         role="button"
                         id="aboutusb"
-                        >About us</a
+                      >About us</a
                       >
                     </div>
                     <div className="btn-group dropend">
@@ -47,7 +47,7 @@ function LandingPage() {
                         className="btn btn-info"
                         role="button"
                         id="contactus"
-                        >Contact Us</a
+                      >Contact Us</a
                       >
                     </div>
                   </div>
@@ -101,7 +101,7 @@ function LandingPage() {
                     <div className="col-1 a">
                       <div className="btn-group dropend">
                         <a
-                          href="#productsrow2"
+                          href="#aboutus"
                           className="btn btn-info"
                           role="button"
                           id="aboutusb"
@@ -126,7 +126,7 @@ function LandingPage() {
             </div>
           </div>
 
-          
+
           <div className="front">
             <div className="para">
               <h1 style={{ fontSize: "8vw" }}>VALSCO</h1>
@@ -143,7 +143,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
- 
+
       {/* <div className='imghovercontainer'>
       <img className="imghover" src={imgvalsco} alt="" />
     </div> */}

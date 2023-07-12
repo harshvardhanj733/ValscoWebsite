@@ -1,53 +1,101 @@
-import './Contact.css';
-import React from 'react';
+import React, { useState } from "react";
+import "./Contact.css";
+import { useForm, Controller } from "react-hook-form";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+import validator from 'validator';
+
+const PHONE_REGEX = new RegExp(
+  /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,3}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/
+);
 
 function Contact() {
+  const {
+    handleSubmit,
+    formState: { errors },
+    control
+  } = useForm();
+
+  const [isButtonClicked, setIsButtonClicked] = useState(false); // State variable to track button click
+  const [num, setnum] = useState(0);
+  
+  const [errorMessage, setErrorMessage] = useState(null); // State variable to track button click
+  const [bi, setbi] = useState(0);
+
+  function Convert(event){
+    setnum(event.target.value);
+  }
+
+  const handleFormSubmit = (data) => {
+    setIsButtonClicked(true); // Set the state to indicate button click
+    console.log(data.phoneInput); // Log the phone input value
+    // Perform form submission logic here
+  
+    const isIndianNumber = data.phoneInput.startsWith('+91');
+    const isValidIndianNumber = isIndianNumber && data.phoneInput.length === 13;
+  
+    if (isIndianNumber && !isValidIndianNumber) {
+      // Invalid Indian phone number, display error message
+      setErrorMessage('*Invalid number');
+      return;
+    }
+  
+    // Non-Indian phone number or valid Indian phone number, continue with form submission logic
+    setbi(1);
+    setErrorMessage(null);
+    // Perform your form submission logic here
+  };  
+  
+
+  const handleValidate = (phoneNumber) => {
+    if (PHONE_REGEX.test(phoneNumber)) {
+      errors["phone-input"] && delete errors["phone-input"];
+      if (
+        phoneNumber.length === 10 &&
+        phoneNumber.startsWith("91")
+      ) {
+        // Valid Indian phone number
+        return true;
+      } else {
+        // Valid phone number (non-Indian)
+        return true;
+      }
+    } else {
+      errors["phone-input"] = {
+        type: "manual",
+        message: "Invalid phone number. Please try again."
+      };
+      return false;
+    }
+  };
   return (
     <div className="complete">
       <div className="App">
-        <div className="card-group">
+        <div className="card-group" id="aboutus">
           <div className="card">
-            <img src={require("../../components/images/anime1.jpg")} className="car" alt="tp" />
+            <img src={require("../../components/images/i2.jpg")} className="cardu" alt="y" />
             <div className="card-body">
-              <h5 className="card-title">Lorem Ipsum</h5>
+              <h5 className="card-title">Ayan Bhowal</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Co-Founder
               </p>
             </div>
           </div>
           <div className="card">
-            <img src={require("../../components/images/anime2.jpg")} className="cardu" alt="y" />
+            <img src={require("../../components/images/i11.jpg")} className="car" alt="tp" />
             <div className="card-body">
-              <h5 className="card-title">Lorem Ipsum</h5>
+              <h5 className="card-title">Sanidhya Agarwal</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Founder
               </p>
             </div>
           </div>
           <div className="card">
-            <img src={require("../../components/images/anime3.jpg")} className="cardui" alt="p" />
+            <img src={require("../../components/images/i32.jpg")} className="cardui" alt="p" />
             <div className="card-body">
-              <h5 className="card-title">Lorem Ipsum</h5>
+              <h5 className="card-title">Srishti Jain</h5>
               <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Co-Founder
               </p>
             </div>
           </div>
@@ -72,8 +120,8 @@ function Contact() {
           <br />
           <p>Experience the Valsco Difference, Request a Consultation Today!</p>
         </div>
-        <div className="b-form">
-          <form>
+        <div className="b-form" id = "contactusrow2">
+          <form onSubmit={handleSubmit(handleFormSubmit)}>
             <div className="form-row">
               <label htmlFor="inputEmail4">Name</label>
               <input
@@ -93,13 +141,29 @@ function Contact() {
               />
             </div>
             <div className="form-row">
-              <label htmlFor="inputAddress2">Number</label>
-              <input
-                type="tel"
-                className="form-control"
-                id="inputAddress2"
-                placeholder="Your Contact number"
-              />
+              <div>
+                <label htmlFor="phone-input">Phone Number</label>
+                <Controller
+                  name="phoneInput" // Make sure this matches the name used in data.phoneInput
+                  control={control}
+                  rules={{
+                    validate: (value) => handleValidate(value)
+                  }}
+                  render={({ field: { onChange, value } }) => (
+                    <PhoneInput
+                      value={value}
+                      onChange={onChange}
+                      defaultCountry="IN"
+                      id="phone-input"
+                      className={errorMessage !== null ? "yt" : ""}
+                    />
+                  )}
+                />
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
+                {/* {!!errors["phone-input"] && (
+                  <p style={{ color: "red" }}>{errors["phone-input"].message}</p>
+                )} */}
+              </div>
             </div>
             <div className="form-row">
               <label htmlFor="inputCity">Company</label>
@@ -110,9 +174,14 @@ function Contact() {
                 placeholder="Your Company/Organisation"
               />
             </div>
-            <button type="submit" className="btn btn-primary transparent-button" id = "buton">
-              Click to send your message
-            </button>
+            <button
+            type="submit"
+            className="btn btn-primary transparent-button"
+            id="buton"
+            // disabled={!!errors["phone-input"]}
+          >
+            Click to send your message
+          </button>
           </form>
         </div>
       </div>
@@ -121,8 +190,8 @@ function Contact() {
         <h1 id="tell">Tell us about It!</h1>
         <div className="privacy">
           <p1>valscotech@gmail.com</p1>
-          <p2>636 Broughton St</p2>
-          <p2>Vancouver, BC V6G 3K3</p2>
+          <p2>J-3 SHAHABDI ENCLAVE</p2>
+          <p2>NOIDA, UTTAR PRADESH 201301</p2>
           <p4>Privacy Policy</p4>
         </div>
       </div>
@@ -132,16 +201,19 @@ function Contact() {
             <i className="fa fa-github fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
             <i className="fa fa-twitter fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
             <i className="fa fa-facebook fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            <i className="fa fa-instagram fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            <i className="fa fa-whatsapp fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+            <a href="https://instagram.com/vals.co_tech?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-instagram fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+            </a>
+            <a href="https://www.linkedin.com/company/valscotech/?fbclid=PAAaZ3ATa670NzIC1DB7OLSwzO9bOqISugzSF9Bs-sWUJjBBKLuYvnkm-qUJw" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-linkedin fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+            </a>
           </div>
         </div>
       </div>
-</div>
+    </div>
 
   );
 }
 
 
 export default Contact;
-
