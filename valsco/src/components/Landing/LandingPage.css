@@ -239,6 +239,7 @@ transform: scale(1.0);
 .para {
   margin-top: 15%;
   margin-left: 10%;
+  font-family: sans-serif;
 }
 
 .para1 {
@@ -246,6 +247,7 @@ transform: scale(1.0);
   max-width: 600px; /* Set a maximum width to limit the box size */
   /* Adjust the height to your desired value */
   overflow: auto;
+  font-family: sans-serif;
 }
 
 .img {

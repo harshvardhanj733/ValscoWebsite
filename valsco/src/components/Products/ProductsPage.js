@@ -13,7 +13,7 @@ import "swiper/css/pagination"
 function ProductsPage() {
   return (
     <>
-      <div className="main">
+      <div className="main" id="productsrow2">
         <h2>Products</h2>
         <div className="main1">
           <Swiper
@@ -27,7 +27,7 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                  src={require("../../components/images/P1.jpg")}
                   alt=""
                 />{" "}
               </a>
@@ -38,7 +38,7 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src="https://images.unsplash.com/photo-1505664063603-28e48ca204eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  src={require("../../components/images/P2.jpg")}
                   alt=""
                 />
               </a>
@@ -49,7 +49,18 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                  src={require("../../components/images/P3.jpg")}
+                  alt=""
+                />
+              </a>
+            </SwiperSlide>
+
+            {/* <SwiperSlide>
+              {" "}
+              <a href="https://www.youtube.com/" target="_blank">
+                {" "}
+                <img
+                  src={require("../../components/images/newlogo.png")}
                   alt=""
                 />
               </a>
@@ -60,22 +71,11 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src="https://images.unsplash.com/photo-1528747008803-f9f5cc8f1a64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGxhd3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+                  src={require("../../components/images/newlogo.png")}
                   alt=""
                 />
               </a>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
@@ -83,4 +83,4 @@ function ProductsPage() {
   )
 }
 
-export default ProductsPage
+export default ProductsPage;
