@@ -18,11 +18,11 @@ function Contact() {
 
   const [isButtonClicked, setIsButtonClicked] = useState(false); // State variable to track button click
   const [num, setnum] = useState(0);
-  
+
   const [errorMessage, setErrorMessage] = useState(null); // State variable to track button click
   const [bi, setbi] = useState(0);
 
-  function Convert(event){
+  function Convert(event) {
     setnum(event.target.value);
   }
 
@@ -30,22 +30,22 @@ function Contact() {
     setIsButtonClicked(true); // Set the state to indicate button click
     console.log(data.phoneInput); // Log the phone input value
     // Perform form submission logic here
-  
+
     const isIndianNumber = data.phoneInput.startsWith('+91');
     const isValidIndianNumber = isIndianNumber && data.phoneInput.length === 13;
-  
+
     if (isIndianNumber && !isValidIndianNumber) {
       // Invalid Indian phone number, display error message
       setErrorMessage('*Invalid number');
       return;
     }
-  
+
     // Non-Indian phone number or valid Indian phone number, continue with form submission logic
     setbi(1);
     setErrorMessage(null);
     // Perform your form submission logic here
-  };  
-  
+  };
+
 
   const handleValidate = (phoneNumber) => {
     if (PHONE_REGEX.test(phoneNumber)) {
@@ -70,6 +70,33 @@ function Contact() {
   };
   return (
     <div className="complete">
+      <div className="abtus">
+        <div className="header">
+          <h1>WHO WE ARE</h1>
+        </div>
+        <div className="content">
+          <p>We excel in creating personalized software solutions designed to cater specifically to our clients' individual requirements. We recognize that committing to software investments is a significant choice for any business.</p>
+        </div>
+        <div className="info">
+          <img src={require("../../components/images/abt.jpeg")} className="float-left" alt="y" />
+          <p1>OUR PEOPLE COME FIRST</p1><br></br>
+          <p>Valsco specializes in developing custom software solutions that are tailored to meet the
+unique needs of the clients. We understand that investing in software solutions is a big
+decision for any business. That is why we offer a comprehensive range of services that
+go beyond just software development. Our consulting, training, and support services are
+designed to ensure that our clients can get the most out of their needs and visions.
+Valsco focuses on innovation and development. This involves constantly exploring new
+technologies, methods, and processes to create software solutions that are more
+efficient, effective, and user-friendly.
+In addition to innovation, we as a company also focus on improving its products,
+processes, and services. This involves regularly evaluating the effectiveness of existing
+solutions and identifying areas for improvement. Continuous improvement ensures that
+our company is always of the highest quality and offers maximum value to customers.
+Our team of experienced developers, designers, and project managers work closely with
+our clients to ensure that their software solutions are not only user-friendly, but also
+efficient and effective.</p>
+        </div>
+      </div>
       <div className="App">
         <div className="card-group" id="aboutus">
           <div className="card">
@@ -79,6 +106,7 @@ function Contact() {
               <p className="card-text">
                 Co-Founder
               </p>
+              <p className="ap">Ayan Bhowal is our approachable, dependable, and vastly talented Director. With his composed and collected demeanor and persistent drive, Valsco is positioned to prosper and thrive.</p>
             </div>
           </div>
           <div className="card">
@@ -88,6 +116,7 @@ function Contact() {
               <p className="card-text">
                 Founder
               </p>
+              <p className="sap">Sanidhya Agarwal, our Managing Director, has amazing leadership qualities and a very advanced and holistic vision for Valsco. With his keen eye for detall and strive for perfection, he Is the perfect captain of the Valsco ship.</p>
             </div>
           </div>
           <div className="card">
@@ -97,6 +126,7 @@ function Contact() {
               <p className="card-text">
                 Co-Founder
               </p>
+              <p className="sp">Srishti Jain, our Director, is dependable, resourceful and always ready to take up challenges. With an amazing team spirit, she brings to the Valsco table amazing skills and proficiency</p>
             </div>
           </div>
         </div>
@@ -120,7 +150,7 @@ function Contact() {
           <br />
           <p>Experience the Valsco Difference, Request a Consultation Today!</p>
         </div>
-        <div className="b-form" id = "contactusrow2">
+        <div className="b-form" id="contactusrow2">
           <form onSubmit={handleSubmit(handleFormSubmit)}>
             <div className="form-row">
               <label htmlFor="inputEmail4">Name</label>
@@ -175,13 +205,13 @@ function Contact() {
               />
             </div>
             <button
-            type="submit"
-            className="btn btn-primary transparent-button"
-            id="buton"
+              type="submit"
+              className="btn btn-primary transparent-button"
+              id="buton"
             // disabled={!!errors["phone-input"]}
-          >
-            Click to send your message
-          </button>
+            >
+              Click to send your message
+            </button>
           </form>
         </div>
       </div>

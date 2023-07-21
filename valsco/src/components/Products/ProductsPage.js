@@ -27,7 +27,7 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src={require("../../components/images/P1.jpg")}
+                  src={require("../../components/images/P11.png")}
                   alt=""
                 />{" "}
               </a>
@@ -38,7 +38,7 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src={require("../../components/images/P2.jpg")}
+                  src={require("../../components/images/P2.png")}
                   alt=""
                 />
               </a>
@@ -49,7 +49,7 @@ function ProductsPage() {
               <a href="https://www.youtube.com/" target="_blank">
                 {" "}
                 <img
-                  src={require("../../components/images/P3.jpg")}
+                  src={require("../../components/images/P3.svg")}
                   alt=""
                 />
               </a>

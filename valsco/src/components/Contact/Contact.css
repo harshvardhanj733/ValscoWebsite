@@ -3,6 +3,110 @@
   background-color: white;
   border: none;
 }
+.abtus {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.abtus {
+  background-color:#fff;
+  background-size:cover;
+}
+
+.abtus {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .abtus .content {
+  order: 1;
+} */
+
+/* .abtus .info {
+  order: 2;
+  align-self: flex-end;
+  display: flex;
+} */
+
+.abtus .header {
+  align-self: flex-start;
+  color: black;
+  margin-top: 5%;
+  margin-left: 5%;
+  letter-spacing: 2px;
+  line-height: 2px;
+}
+.abtus .header h1{
+  font-size:x-large;
+}
+.abtus .content {
+  align-self: flex-start;
+  color: black;
+  width: 50%;
+  margin-top: 0%;
+  margin-left: 48%;
+  padding-bottom: 5%;
+}
+.abtus {
+  display: flex;
+  flex-direction: column;
+}
+
+.abtus .info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.abtus .info img {
+  order: -1; /* Move the image to the left */
+  width: 30%;
+  margin-right: 20px; /* Adjust the spacing between the image and text */
+  margin-left: 70px;
+  margin-bottom: 30px;
+  box-shadow: 10px 20px 40px grey;
+}
+
+.abtus .info p1 {
+   margin-top: 5%;
+   color: black;
+   position: relative;
+   left: 15.5%;
+   font-size: large;
+   letter-spacing: 2px;
+   width: 80%;
+}
+
+.abtus .info p {
+  position: relative;
+  right: 11.5%;
+  margin-top: 8%;
+  width: 120%;
+  height: 30%;
+  color: black;
+}
+
+.abtus .sep{
+  color: hsla(191, 75%, 60%, 1);
+  color: linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+
+  color: -moz-linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+
+  color: -webkit-linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+  opacity: 0.90;
+}
 #h1 {
   color: cadetblue;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -11,11 +115,11 @@
   top: 10%;
   font-size: 255%;
 }
-.card-group:hover .card:not(:hover) {
+/* .card-group:hover .card:not(:hover) {
   filter: blur(
     5px
-  ); /* This will blur all the neighboring cards except the one being hovered on */
-}
+  );
+} */
 .car {
   width: 50%;
   height: 35%;
@@ -47,8 +151,9 @@
   transform: scale(1.02);
 }
 .card-group .card-body {
-  margin-top: 8%;
-  width: 95%;
+  margin-top: 5%;
+  width: 90%;
+  height: 10%;
   transition: 0.2s;
   border-radius: 8%;
 }
@@ -56,6 +161,24 @@
   cursor: pointer;
   box-shadow: 5px 5px 10px black;
   transform: scale(1.02);
+}
+.sp{
+  opacity: 0;
+}
+.sap{
+  opacity: 0;
+}
+.ap{
+  opacity: 0;
+}
+.card-body:hover .sp{
+  opacity: 1;
+}
+.card-body:hover .sap{
+  opacity: 1;
+}
+.card-body:hover .ap{
+  opacity: 1;
 }
 .bottom {
   background-color: black;
@@ -300,7 +423,9 @@ $blueColor:rgba(33,150,243,1); */
 .b-form .PhoneInputInput {
   /* border-bottom: none; */
 }
-
 .b-form .yt .PhoneInputInput {
   border-bottom: 2px solid red;
+}
+.card-text{
+  height: 10%;
 }
