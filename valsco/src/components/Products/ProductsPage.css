@@ -5,16 +5,15 @@
     }
 
     .main h2 {
-        margin-top: 0px;
         font-size: 75px;
         text-align: center;
-        padding-top: 10px;
+        padding-top: 15px;
         font-family: 'Geologica', sans-serif;
         color: #212A3E;
     }
 
     .main {
-        height: 100vh;
+        height: 130vh;
     }
 
     .main1 {
@@ -22,19 +21,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 55px;
     }
 
     .main {
         .swiper {
-            width: 650px;
-            height: 500px;
+            width: 640px;
+            height: 750px;
         }
 
         .swiper-slide {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 18px;
+            border-radius: 10px;
             font-weight: bold;
         }
 
@@ -42,8 +42,8 @@
 
 
     .main1 img {
-        width: 650px;
-        height: 500px;
+        width: 620px;
+        height: 800px;
 
     }
 

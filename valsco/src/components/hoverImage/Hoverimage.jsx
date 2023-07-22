@@ -18,19 +18,19 @@ const HoverImage = () => {
       );
     };
 
-    containerRef.current.addEventListener('mousemove', handleMouseMove);
+    containerRef.current?.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      containerRef.current.removeEventListener('mousemove', handleMouseMove);
+      containerRef.current?.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
   const imageStyle = {
     position: 'absolute',
-    width: '350px',
-    height: '350px',
-    left: `${position.x - 175}px`,
-    top: `${position.y - 175}px`,
+    width: '400px',
+    height: '400px',
+    left: `${position.x - 195}px`,
+    top: `${position.y - 195}px`,
     transition: 'transform .4s ease',
     transform: isHovered ? 'scale(1)' : 'scale(0)',
   };
@@ -40,7 +40,7 @@ const HoverImage = () => {
     <div
       ref={containerRef}
       style={{
-        cursor: 'none',
+        cursor: 'pointer',
         position: 'relative',
         width: '100%',
         height: '85vh',

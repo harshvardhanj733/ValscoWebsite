@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------NAVIGATION BAR------------------------ */
+.nav-bar{
+  padding: 10px 20px;
+  display:flex;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+}
+.nav-bar-head{
+  color: black;
+  text-decoration: none;
+  padding-top: 10px;
+  font-weight: bold;
+}
+.nav-bar ul{
+  display: flex;
+  padding-top:10px ;
+}
+.nav-Link{
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+}
+.nav-Link:hover{
+  border-bottom: 2px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+.hamburger-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  padding-bottom: 20px;
+}
+
+.hamburger-d{
+  width: 40px;
+  margin: 7px;
+  border: 2px solid black;
+}
+
+.nav-bar-hamburger{
+  padding: 20px 20px;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+}
+.nav-bar-hamburger ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.nav-bar-hamburger li{
+  padding: 20px 10px;
+}
+@media screen and (max-width:565px) {
+
+  .hamburger-btn{
+    display: block;
+  }
+  .nav-bar ul{
+    display:none ;
+  }
+  
+}
+
+
+
+
+
+  /* ------------------------------------SLIDER------------------------------ */
+
+  .swiper-container {
+    margin: 50px 0px;
+  }
+
+  #valsco-logo{
+    margin: auto;
+  }
+  .swiper-slide-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 2px lightgrey;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 50px;
+  }
+  .swiper-slide-title{
+    width: 100%;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .swiper-slide-desc{
+    text-align: center;
+    height: 120px;
+  }
+
+.swiperslide {
+  max-width: 50%;
+  /* max-height: 80%; */
+}
+Swiper {
+  background-position: center;
+}
+.swiper-slide-author{
+  text-align: center;
+  font-weight: bold;
+}
+.slider-instruct{
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .swiperslide {
+    max-width: 80%;
+  }
+}
+
+
+/* -----------------------------------BLOG CARD-------------------------------------- */
+
+
+
+.blog-description {
+  height: 300px;
+}
+.blog-section {
+  width: 900px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  margin: 30px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+}
+/* .blog-card:hover {
+  border: 1px solid green;
+} */
+.blog-card-title{
+  /* border: 2px solid red; */
+  width: 320px;
+  white-space: nowrap; 
+  padding: 0px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog-card-desc{
+  height: 120px;
+}
+.blog-card-author {
+  font-weight: bold;
+}
+.blog-card-btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog-card-read-btn {
+  width: 110px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    hsla(248, 87%, 36%, 1) 0%,
+    hsla(191, 75%, 60%, 1) 100% 
+  );
+  margin: 4px;
+  text-decoration: none;
+  color: white;
+}
+.blog-card-read-btn:hover {
+  background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100% 
+  );
+  border: 1px solid green;
+  color: black;
+  text-decoration: none;
+}
+.blog-card-delete-btn {
+  width: 110px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    hsla(248, 87%, 36%, 1) 0%,
+    hsla(191, 75%, 60%, 1) 100% 
+  );
+  margin: 4px;
+  text-decoration: none;
+  color: white;
+  border: 0;
+
+}
+.blog-card-delete-btn:hover {
+  background: linear-gradient(
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100% 
+  );
+  border: 1px solid red;
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 420px) {
+  .blog-card {
+    font-size: 13px;
+    width: 400px;
+    height: 320px;
+  }
+}
+
+/* -----------------------------------------BLOG HOME------------------------------------ */
+
+.blog-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #2e2d2d;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #2c2a2a transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------------------CREATE BLOG SECTION-------------------------------- */
+
+.create-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+  border-radius: 50px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-blog {
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 500px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.type-blog {
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  border-radius: 15px;
+}
+.create-blog-btn {
+  width: 150px;
+  height: 50px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid green;
+  margin: 4px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+.create-blog-btn:hover {
+  background-color: green;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  .create-div {
+    width: 400px;
+  }
+  .title-blog {
+    width: 300px;
+    height: 50px;
+  }
+  .type-blog {
+    width: 300px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .create-div h2 {
+    font-size: 18px;
+  }
+  .create-div {
+    width: 280px;
+  }
+  .title-blog {
+    width: 200px;
+    height: 50px;
+  }
+  .type-blog {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* --------------------------------DETAILED-BLOG----------------------- */
+
+.detailed-blog {
+  text-align: center;
+  border-bottom: 2px solid darkblue;
+  padding: 50px 0px;
+  margin: 30px 50px;
+}
+.detailed-blog-title {
+  padding: 30px 0px;
+}
+.detailed-blog-author {
+  font-weight: bold;
+}
+
+/* ----------------------------------LOGIN SECTION--------------------------------- */
+
+.login-head {
+  text-align: center;
+  padding-top: 50px;
+}
+#login-img {
+  width: 150px;
+}
+#google-img {
+  width: 30px;
+}
+.login-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  border-radius: 50px;
+  padding: 50px;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+  width: 400px;
+}
+.login-btn {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  background-color: white;
+}
+.login-btn:hover {
+  box-shadow: 0px 0px 10px 2px lightgrey;
+}
+
+@media screen and (max-width: 450px) {
+  .login-div {
+    width: 280px;
+  }
+}
+
+
+.alert-main-div{
+  height: 40px;
+  position: sticky;
+  top: 80px;
+  z-index: 20;
+}
+.alert-div{
+  padding-top: 5px;
+  height: 40px;
+  text-align: center;
+  width: 100%;
+}
