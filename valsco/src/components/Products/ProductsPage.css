@@ -1,163 +1,217 @@
-@media screen and (min-width: 900px) and (max-width:2000px) {
+@media screen and (min-width:958px) {
     body {
         overflow-x: hidden;
         margin: 0px;
     }
 
-    .main h2 {
-        font-size: 75px;
-        text-align: center;
-        padding-top: 15px;
-        font-family: 'Geologica', sans-serif;
-        color: #212A3E;
-    }
-
-    .main {
-        height: 130vh;
-    }
-
-    .main1 {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 55px;
-    }
-
-    .main {
-        .swiper {
-            width: 640px;
-            height: 750px;
-        }
-
-        .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
+    .phone {
+        display: none;
     }
 
 
-    .main1 img {
-        width: 620px;
-        height: 800px;
-
-    }
-
-
-
-}
-
-@media screen and (min-width: 400px) and (max-width: 900px) {
-    body {
-        overflow-x: hidden;
-        margin: 0px;
-    }
-
-
-    .main h2 {
-        margin-top: 0px;
-        font-size: 75px;
-        text-align: center;
-        padding-top: 10px;
-        font-family: 'Geologica', sans-serif;
-        color: #212A3E;
-    }
-
-    .main {
+    .lap1 {
+        width: 100vw;
         height: 100vh;
     }
 
-    .main1 {
+    .full {
 
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        gap: 2px;
     }
 
-    .main {
-        .swiper {
-
-            width: 380px;
-            height: 450px;
-        }
-
-        .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 18px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
-
-        }
+    .mock1 {
+        transition: 0.6s;
+        width: 280px;
+        height: 500px;
 
     }
 
+    .iphone1 {
+        transition: 5s;
+        transform: translateX(95px);
+        z-index: 9999999;
+    }
 
-    .main1 img {
-        width: 380px;
-        height: 450px;
+    .iphone2 {
+        transition: 10000s;
+    }
 
+    .iphone2:hover {
+        margin-left: 15%;
+        margin-right: 15%;
+        transition: 0.5s;
+    }
+
+    .iphone3 {
+        transition: 1s;
+        transform: translateX(-95px);
+        z-index: 9999999;
     }
 }
 
 
-@media screen and (max-width:399px) {
 
+@media screen and (max-width:958px) {
     body {
         overflow-x: hidden;
         margin: 0px;
     }
 
-    .main h2 {
-        margin-top: 0px;
-        font-size: 75px;
-        text-align: center;
-        padding-top: 10px;
-        font-family: 'Geologica', sans-serif;
-        color: #212A3E;
+    .phone {
+        display: none;
     }
 
-    .main {
+
+    .lap1 {
+
+        width: 80vw;
         height: 100vh;
     }
 
-    .main1 {
+    .full {
 
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        gap: 2px;
     }
 
-    .main {
-        .swiper {
 
-            width: 250px;
-            height: 350px;
+    .mock1 {
+        transition: 0.6s;
+        width: 200px;
+        height: 430px;
+
+    }
+
+    .iphone1 {
+        transition: 1s;
+        transform: translateX(85px);
+        z-index: 9999999;
+    }
+
+    .iphone2 {
+        transition: 10000s;
+    }
+
+    .iphone2:hover {
+        margin-left: 15%;
+        margin-right: 15%;
+        transition: 0.5s;
+    }
+
+    .iphone3 {
+        transition: 1s;
+        transform: translateX(-85px);
+        z-index: 9999999;
+    }
+
+}
+
+@media screen and (max-width:622px) {
+    body {
+        overflow-x: hidden;
+        margin: 0px;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .lap1 {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .full {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        gap: 2px;
+    }
+
+
+    .mock1 {
+        transition: 0.6s;
+        width: 150px;
+        height: 330px;
+
+    }
+
+    .iphone1 {
+        transition: 1s;
+        transform: translateX(65px);
+        z-index: 9999999;
+    }
+
+    .iphone2 {
+        transition: 10000s;
+    }
+
+    .iphone2:hover {
+        margin-left: 15%;
+        margin-right: 15%;
+        transition: 0.5s;
+    }
+
+    .iphone3 {
+        transition: 1s;
+        transform: translateX(-65px);
+        z-index: 9999999;
+    }
+
+}
+
+
+@media screen and (min-width:200px) and (max-width:480px) {
+    body {
+        /* overflow-x: hidden; */
+        margin: 0px;
+    }
+
+    .lap {
+        display: none;
+    }
+
+
+    .phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+
+        .swiper {
+            position: relative;
+            width: 260px;
+            height: 540px;
         }
 
         .swiper-slide {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 18px;
-            font-size: 22px;
-            font-weight: bold;
-            color: #fff;
-
+            border-radius: 70px;
         }
-
     }
 
-    .main1 img {
-        width: 250px;
-        height: 350px;
 
+
+    .mock {
+        width: 260px;
+        height: 540px;
     }
-
 }

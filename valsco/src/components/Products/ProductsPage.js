@@ -1,86 +1,61 @@
-import React, { useRef, useState } from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import styles from "./ProductsPage.css"
-import "swiper/css"
-import "swiper/css/effect-cards"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/scrollbar"
-import { EffectCards } from "swiper"
-import "swiper/css"
-import "swiper/css/pagination"
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import styles from './ProductsPage.css'
+import 'swiper/css';
+import "swiper/css/effect-cards";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { EffectCards } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
+import Iphone from './images/juri.png';
+import Client from './images/client.png';
+import Login from './images/login.png'
 
 function ProductsPage() {
   return (
     <>
-      <div className="main" id="productsrow2">
-        <h2>Products</h2>
-        <div className="main1">
-          <Swiper
-            effect={"cards"}
-            grabCursor={true}
-            modules={[EffectCards]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src={require("../../components/images/P11.png")}
-                  alt=""
-                />{" "}
-              </a>
-            </SwiperSlide>
+      <div className="lap"> <div className="lap1">
+        <div className="full">
+          <div className="iphone1">
+            <img className="mock1" src={Iphone} alt="" />
+          </div>
+          <div className="iphone2">
+            <img className="mock1"src={Client} alt="" />
+          </div>
+          <div className="iphone3">
+            <img className="mock1"src={Login} alt="" />
+          </div>
+        </div >
+      </div></div>
+      <div className="phone">
+        <Swiper
+          effect={"cards"}
+          grabCursor={true}
+          modules={[EffectCards]}
+          className="mySwipe"
+        >
 
-            <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src={require("../../components/images/P2.png")}
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
+          <SwiperSlide>   <div >
+            <img  className="mock" src={Iphone} alt="" />
 
-            <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src={require("../../components/images/P3.svg")}
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
+          </div></SwiperSlide>
 
-            {/* <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src={require("../../components/images/newlogo.png")}
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
 
-            <SwiperSlide>
-              {" "}
-              <a href="https://www.youtube.com/" target="_blank">
-                {" "}
-                <img
-                  src={require("../../components/images/newlogo.png")}
-                  alt=""
-                />
-              </a>
-            </SwiperSlide> */}
-          </Swiper>
-        </div>
+          <SwiperSlide> <div >
+            <img  className="mock"src={Client} alt="" />
+          </div></SwiperSlide>
+
+
+          <SwiperSlide>  <div>
+            <img className="mock" src={Login} alt="" />
+          </div></SwiperSlide>
+        </Swiper>
       </div>
     </>
-  )
+  );
 }
 
 export default ProductsPage;
