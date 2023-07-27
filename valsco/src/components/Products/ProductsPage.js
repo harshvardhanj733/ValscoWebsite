@@ -18,7 +18,7 @@ function ProductsPage() {
   return (
     <>
       <div className="lap"> <div className="lap1">
-        <div className="full">
+        <div className="fulls">
           <div className="iphone1">
             <img className="mock1" src={Iphone} alt="" />
           </div>
@@ -30,30 +30,6 @@ function ProductsPage() {
           </div>
         </div >
       </div></div>
-      <div className="phone">
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards]}
-          className="mySwipe"
-        >
-
-          <SwiperSlide>   <div >
-            <img  className="mock" src={Iphone} alt="" />
-
-          </div></SwiperSlide>
-
-
-          <SwiperSlide> <div >
-            <img  className="mock"src={Client} alt="" />
-          </div></SwiperSlide>
-
-
-          <SwiperSlide>  <div>
-            <img className="mock" src={Login} alt="" />
-          </div></SwiperSlide>
-        </Swiper>
-      </div>
     </>
   );
 }

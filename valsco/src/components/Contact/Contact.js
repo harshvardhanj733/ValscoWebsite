@@ -81,20 +81,20 @@ function Contact() {
           <img src={require("../../components/images/abt.jpeg")} className="float-left" alt="y" />
           <p1>OUR PEOPLE COME FIRST</p1><br></br>
           <p>Valsco specializes in developing custom software solutions that are tailored to meet the
-unique needs of the clients. We understand that investing in software solutions is a big
-decision for any business. That is why we offer a comprehensive range of services that
-go beyond just software development. Our consulting, training, and support services are
-designed to ensure that our clients can get the most out of their needs and visions.
-Valsco focuses on innovation and development. This involves constantly exploring new
-technologies, methods, and processes to create software solutions that are more
-efficient, effective, and user-friendly.
-In addition to innovation, we as a company also focus on improving its products,
-processes, and services. This involves regularly evaluating the effectiveness of existing
-solutions and identifying areas for improvement. Continuous improvement ensures that
-our company is always of the highest quality and offers maximum value to customers.
-Our team of experienced developers, designers, and project managers work closely with
-our clients to ensure that their software solutions are not only user-friendly, but also
-efficient and effective.</p>
+            unique needs of the clients. We understand that investing in software solutions is a big
+            decision for any business. That is why we offer a comprehensive range of services that
+            go beyond just software development. Our consulting, training, and support services are
+            designed to ensure that our clients can get the most out of their needs and visions.
+            Valsco focuses on innovation and development. This involves constantly exploring new
+            technologies, methods, and processes to create software solutions that are more
+            efficient, effective, and user-friendly.
+            In addition to innovation, we as a company also focus on improving its products,
+            processes, and services. This involves regularly evaluating the effectiveness of existing
+            solutions and identifying areas for improvement. Continuous improvement ensures that
+            our company is always of the highest quality and offers maximum value to customers.
+            Our team of experienced developers, designers, and project managers work closely with
+            our clients to ensure that their software solutions are not only user-friendly, but also
+            efficient and effective.</p>
         </div>
       </div>
       <div className="App">

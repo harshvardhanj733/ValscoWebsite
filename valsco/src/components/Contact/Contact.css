@@ -1,7 +1,7 @@
 .card {
   margin-top: 18%;
-  background-color: white;
   border: none;
+  padding-top: 5%;
 }
 .abtus {
   display: flex;
@@ -45,7 +45,7 @@
   color: black;
   width: 50%;
   margin-top: 0%;
-  margin-left: 48%;
+  margin-left: 50%;
   padding-bottom: 5%;
 }
 .abtus {
@@ -71,7 +71,7 @@
    margin-top: 5%;
    color: black;
    position: relative;
-   left: 15.5%;
+   left: 14%;
    font-size: large;
    letter-spacing: 2px;
    width: 80%;
@@ -122,30 +122,27 @@
 } */
 .car {
   width: 50%;
-  height: 35%;
-  margin-left: 23%;
+  height: 45%;
+  margin-left: 20%;
   border-radius: 50%;
-  border: 0.1px solid black;
   transition: 0.2s;
 }
 .cardu {
   width: 50%;
-  height: 35%;
-  margin-left: 25%;
+  margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
 }
 .cardui {
   width: 50%;
-  height: 35%;
-  margin-left: 23%;
+  height: 45%;
+  margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
 }
 .car:hover,
 .cardu:hover,
 .cardui:hover {
-  width: 50%;
   box-shadow: 5px 5px 15px black;
   cursor: pointer;
   transform: scale(1.02);
@@ -425,7 +422,4 @@ $blueColor:rgba(33,150,243,1); */
 }
 .b-form .yt .PhoneInputInput {
   border-bottom: 2px solid red;
-}
-.card-text{
-  height: 10%;
 }
