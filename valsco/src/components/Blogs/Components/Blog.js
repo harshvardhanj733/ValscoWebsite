@@ -31,7 +31,7 @@ const Blog = (currentElement,authenticated , setAlertMsg, setAlertColor) => {
     <>
     <section className='blog-card'>
       <img src={require("../../../components/images/blog-logo.png")} id='valsco-logo'/>
-      <h4 className='blog-card-title'>{title}</h4>
+      <div className='blog-card-title-div'><h4 className='blog-card-title'>{title}</h4></div>
       <p className='blog-card-desc'>{postText.slice(0,180)}...</p>
       <p className='blog-card-author'>@{author.name}</p>
       <div className='blog-card-btn-div'>

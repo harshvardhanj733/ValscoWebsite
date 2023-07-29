@@ -24,6 +24,16 @@
   color: black;
   padding: 10px 20px;
 }
+.navbarLink{
+  text-decoration: none;
+  color: black;
+  padding:0px 10px;
+}
+.navbarLink:hover{
+  text-decoration: none;
+  color: white;
+  padding:0px 10px;
+}
 .nav-Link:hover{
   border-bottom: 2px solid black;
   text-decoration: none;
@@ -69,6 +79,276 @@
   
 }
 
+.wrapper {
+  background: rgb(5, 67, 79);
+background: linear-gradient(
+  90deg,
+  rgba(26, 165, 193, 0.7) 0%,
+  rgba(57, 155, 177, 0.7) 90%,
+);
+background: -moz-linear-gradient(
+  90deg,
+  rgba(40, 120, 149, 0.7) 90%,
+  rgba(5, 67, 79, 0.7) 100%
+);
+background: -webkit-linear-gradient(
+  90deg,
+  /* rgba(26, 165, 193, 0.7) 0%, */
+  rgb(253, 254, 254) 5%,
+  rgb(122, 205, 235) 70%,
+  rgba(0, 88, 183, 0.785) 100%
+);
+  opacity: 1;
+}
+/* #pl .container-fluid{
+  background-color: black;
+} */
+.navbar{
+  background-color: aliceblue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2px;
+  box-shadow: 5px 5px 15px rgb(122, 205, 235);
+}
+#row1{
+  width: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  justify-content: space-around;
+  height: 65px;
+  font-size: 20px;
+}
+.heading{
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: 23px;
+}
+#homeb{
+  font-size: 13px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
+}
+#homeb:hover{
+background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );color:aliceblue;
+  font-weight: bold;
+  border-radius: 50px;
+  transform: scale(1.3);
+  box-shadow : 2px 2px 2px rgb(0, 37, 149);
+  z-index:2;
+}
+#contactus{
+  font-size: 13px;
+  background: hsla(217, 100%, 50%, 1);
+
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );color: aliceblue;
+transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
+}
+#contactus:hover{
+  background-color: aliceblue;
+  font-weight: bold;
+  border-radius: 50px;
+  transform: scale(1.3);
+  box-shadow : 2px 2px 2px rgb(0, 37, 149);
+  z-index:2;
+}
+#productsb{
+  font-size: 13px;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  transition: 0.5s, color 0s, font-weight 0.5s, border-radius 0.5s;
+}
+#productsb:hover{
+background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  color:aliceblue;
+  font-weight: bold;
+  border-radius: 50px;
+  transform: scale(1.3);
+  box-shadow : 2px 2px 2px rgb(0, 37, 149);
+  z-index:2;
+}
+#aboutusb{
+  font-size: 13px;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
+}
+#aboutusb:hover{
+  background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+  color:aliceblue;
+  font-weight: bold;
+  border-radius: 50px;
+  transform: scale(1.3);
+  box-shadow : 2px 2px 2px rgb(0, 37, 149);
+  z-index:2;
+}
+#tl{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100%;
+}
+#coll{
+  height: 100%;
+}
+.navbar-toggler{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .a{
+      display: none;
+  } #tl{
+      height: 110%;
+      width: 110%;
+      margin-right: 0;
+      padding-right: 0;
+      margin-left: 200%;
+  }
+  .heading{
+      color: black;
+      font-size: large;
+  }
+  .up{
+      text-align: center;
+  }
+  .navbar-toggler{
+  display: contents;
+}
+/* #aboutusb:hover{
+  background: hsla(217, 100%, 50%, 1);
+
+  background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+  background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+  background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  
+  
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );   color:aliceblue;
+font-weight: bold;
+transform: scale(1.0);
+} */
+#productsb:hover{
+background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -moz-linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -webkit-linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );   color:aliceblue;
+font-weight: bold;
+transform: scale(1.0);
+}
+#contactus{  
+  background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );        
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );color: aliceblue;
+transition: 0.5s,background-color 0s, color 0s, font-weight 0.5s, border-radius 0.5s;
+}
+#contactus:hover{
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  transform: scale(1.0);
+}
+#homeb:hover{
+background: hsla(217, 100%, 50%, 1);
+
+background: linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -moz-linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -webkit-linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 35%, hsla(0, 0%, 100%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );   color:aliceblue;
+font-weight: bold;
+transform: scale(1.0);
+}
+.bg-white{
+  display: flex;
+}
+.btn{
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#homeb{
+  margin-left: 0;
+}
+}
+.para {
+  margin-top: 15%;
+  margin-left: 10%;
+  font-family: sans-serif;
+}
+
+.para1 {
+  width: 80%; /* Adjust the percentage value to your desired width */
+  max-width: 600px; /* Set a maximum width to limit the box size */
+  /* Adjust the height to your desired value */
+  overflow: auto;
+  font-family: sans-serif;
+}
+
+.img {
+  width: 30%;
+  margin-left: 10%;
+  margin-top: 18%;
+}
+.img img {
+  width: 50%;
+}
+.front {
+  display: flex;
+  padding-bottom: 10%;
+}
+.heading {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 
 
 
@@ -76,7 +356,7 @@
   /* ------------------------------------SLIDER------------------------------ */
 
   .swiper-container {
-    margin: 50px 0px;
+    margin-top: 100px;
   }
 
   #valsco-logo{
@@ -119,12 +399,39 @@ Swiper {
   text-align: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 690px) {
   .swiperslide {
     max-width: 80%;
   }
 }
-
+@media screen and (max-width: 970px) {
+  .swiper-slide-desc{
+    height: 180px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .swiperslide {
+    max-width: 70%;
+    /* max-height: 80%; */
+  }
+}
+@media screen and (max-width: 430px) {
+  .swiper-slide-desc{
+    height: 220px;
+  }
+  /* .swiperslide {
+    max-width: 92%;
+  } */
+  .swiperslide {
+    max-width: 90%;
+    /* max-height: 80%; */
+  }
+}
+@media screen and (max-width: 340px) {
+  .swiper-slide-desc{
+    height: 250px;
+  }
+}
 
 /* -----------------------------------BLOG CARD-------------------------------------- */
 
@@ -182,6 +489,8 @@ Swiper {
   margin: 4px;
   text-decoration: none;
   color: white;
+  display: block;
+  text-align: center;
 }
 .blog-card-read-btn:hover {
   background: linear-gradient(
@@ -222,6 +531,24 @@ Swiper {
     font-size: 13px;
     width: 400px;
     height: 320px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .blog-card {
+    font-size: 13px;
+    width: 300px;
+    height: 320px;
+  }
+  .blog-card-delete-btn{
+    width: 80px;
+    height: 30px;
+  }
+  .blog-card-read-btn{
+    width: 80px;
+    height: 30px;
+  }
+  .blog-card-title{
+   width: 200px;
   }
 }
 
@@ -417,7 +744,7 @@ Swiper {
 .alert-main-div{
   height: 40px;
   position: sticky;
-  top: 80px;
+  top: 50px;
   z-index: 20;
 }
 .alert-div{

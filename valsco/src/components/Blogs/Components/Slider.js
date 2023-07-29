@@ -29,7 +29,7 @@ export default function Slider({ authenticated }) {
 
   return (
     <>
-      <div className="swiper-container my-5">
+      <div className="swiper-container">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -53,7 +53,7 @@ export default function Slider({ authenticated }) {
                   <h3 className="swiper-slide-title">{currentElement.title}</h3>
                   <p className="swiper-slide-desc">{currentElement.postText.slice(0, 250)}...</p>
                   <p className="swiper-slide-author">@{currentElement.author.name}</p>
-                  <div>
+                  <div className="blog-card-btn-div">
                     <Link
                       to={`/DetailedBlog/${currentElement.id}`}
                       className="blog-card-read-btn"
