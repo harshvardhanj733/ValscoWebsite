@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import gif from './valscogif.gif';
+import './hover.css';
 import bg from './bgimgvalsco.jpg';
 
 const HoverImage = () => {
@@ -37,18 +38,8 @@ const HoverImage = () => {
 
   return (
     <div style={{display:'flex',justifyContent:'center',margin:'100px'}}>
-    <div
+    <div className='softimage'
       ref={containerRef}
-      style={{
-        cursor: 'pointer',
-        position: 'relative',
-        width: '100%',
-        height: '85vh',
-        borderRadius:'10px',
-        backgroundImage: `url(${bg})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}
     >
       <img
         src={gif}

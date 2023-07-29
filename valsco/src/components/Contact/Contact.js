@@ -80,7 +80,7 @@ function Contact() {
         <div className="info">
           <img src={require("../../components/images/abt.jpeg")} className="float-left" alt="y" />
           <p1>OUR PEOPLE COME FIRST</p1><br></br>
-          <p>Valsco specializes in developing custom software solutions that are tailored to meet the
+          <p className="peoppara">Valsco specializes in developing custom software solutions that are tailored to meet the
             unique needs of the clients. We understand that investing in software solutions is a big
             decision for any business. That is why we offer a comprehensive range of services that
             go beyond just software development. Our consulting, training, and support services are

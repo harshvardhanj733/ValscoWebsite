@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact';
 import LandingPage from './components/Landing/LandingPage';
 import Hoverimage from './components/hoverImage/Hoverimage';
 import Alert from "./components/Blogs/Components/Alert";
+import Newnav from './components/Newnav/Newnav';
 
 function App() {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
@@ -29,7 +30,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<>{!isLoadingComplete ? (<LoadingPage />) : (<><div><LandingPage/><Hoverimage/><ProductsPage /><Slider authenticated={authenticated} /><Contact /> </div></>)}</>}/>
+        <Route path="/" element={<>{!isLoadingComplete ? (<LoadingPage />) : (<><div><Newnav/><LandingPage></LandingPage><Hoverimage/><ProductsPage /><Slider authenticated={authenticated} /><Contact /> </div></>)}</>}/>
         <Route path="/BlogHome" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><BlogHome authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
         <Route path="/CreateBlog" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><CreateBlog authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
         <Route path="/Login" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Login setAuthenticated={setAuthenticated} authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
