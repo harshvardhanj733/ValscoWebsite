@@ -1,4 +1,9 @@
 
+
+li{
+  color: #000;
+  cursor:pointer;
+}
 .sr-only {
     position: absolute;
     width: 1px;
@@ -24,6 +29,7 @@
   
   
   .main-menu {
+    overflow: hidden;
     position: absolute;
     display: none;
     left: -200px;
@@ -118,6 +124,7 @@
       display: none;
     }
     .main-menu {
+      overflow: hidden;
       position: relative;
           left: auto;
           top: auto;

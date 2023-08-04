@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import gif from './valscogif.gif';
 import './hover.css';
-import bg from './bgimgvalsco.jpg';
+import {Link}from 'react-scroll';
 
 const HoverImage = () => {
   const containerRef = useRef(null);
@@ -37,7 +37,8 @@ const HoverImage = () => {
   };
 
   return (
-    <div style={{display:'flex',justifyContent:'center',margin:'100px'}}>
+    <Link to="aboutuspage">
+    <div  style={{display:'flex',justifyContent:'center',margin:'100px'}}>
     <div className='softimage'
       ref={containerRef}
     >
@@ -48,6 +49,7 @@ const HoverImage = () => {
       />
     </div>
     </div>
+    </Link>
   );
 };
 

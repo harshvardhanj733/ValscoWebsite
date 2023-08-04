@@ -1,7 +1,10 @@
+body{
+  overflow-x: hidden;
+}
 .card {
-  margin-top: 18%;
+  margin-top: 15%;
   border: none;
-  padding-top: 5%;
+  height:600px;
 }
 .abtus {
   display: flex;
@@ -128,20 +131,21 @@
 } */
 .car {
   width: 50%;
-  height: 45%;
+  height: 40%;
   margin-left: 20%;
   border-radius: 50%;
   transition: 0.2s;
 }
 .cardu {
-  width: 50%;
+  width: 47%;
+  height:33%;
   margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
 }
 .cardui {
   width: 50%;
-  height: 45%;
+  height: 40%;
   margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
@@ -156,7 +160,6 @@
 .card-group .card-body {
   margin-top: 5%;
   width: 90%;
-  height: 10%;
   transition: 0.2s;
   border-radius: 8%;
 }
@@ -223,7 +226,7 @@
   transform: scaleX(1);
 }
 .card-body{
-  margin-bottom: 30%;
+  margin-bottom: 70%;
   text-align: center;
 }
 .bottom .privacy {
@@ -250,7 +253,7 @@
   background-color: black;
   color: silver;
   padding-top: 5%;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
 }
 .form h1 {
   margin-left: 5%;
@@ -304,6 +307,7 @@
 }
 #buton{
   background: hsla(191, 75%, 60%, 1);
+  color:#fff;
   background: linear-gradient(
     90deg,
     hsla(191, 75%, 60%, 1) 0%,
@@ -334,7 +338,7 @@
 .transparent-button {
   background: transparent;
   border: 2px solid silver;
-  color: silver;
+  color: white;
 }
 
 /* $redColor: rgba(244,67,54,1);

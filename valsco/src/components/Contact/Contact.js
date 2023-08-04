@@ -69,7 +69,7 @@ function Contact() {
     }
   };
   return (
-    <div className="complete">
+    <div id="aboutuspage" className="complete">
       <div className="abtus">
         <div className="header">
           <h1>WHO WE ARE</h1>
@@ -131,7 +131,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="form">
+      <div id="contactuspage" className="form">
         <h1>FUEL.</h1>
         <h1>ELEVATE.</h1>
         <h1>IGNITE YOUR</h1>
@@ -150,7 +150,7 @@ function Contact() {
           <br />
           <p>Experience the Valsco Difference, Request a Consultation Today!</p>
         </div>
-        <div className="b-form" id="contactusrow2">
+        <div  className="b-form" id="contactusrow2">
           <form onSubmit={handleSubmit(handleFormSubmit)}>
             <div className="form-row">
               <label htmlFor="inputEmail4">Name</label>

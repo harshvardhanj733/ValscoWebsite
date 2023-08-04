@@ -16,7 +16,7 @@ import Login from './images/login.png'
 
 function ProductsPage() {
   return (
-    <>
+    <div id="productspage">
       <div className="lap"> <div className="lap1">
         <div className="fulls">
           <div className="iphone1">
@@ -30,7 +30,7 @@ function ProductsPage() {
           </div>
         </div >
       </div></div>
-    </>
+    </div>
   );
 }
 

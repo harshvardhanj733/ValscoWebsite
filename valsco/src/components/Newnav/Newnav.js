@@ -1,6 +1,7 @@
 
 import './Newnav.css';
-import {BrowserRouter, Link} from "react-router-dom";
+import {Link} from 'react-scroll'
+import {BrowserRouter} from "react-router-dom";
 function App() {
   return (
     
@@ -26,9 +27,9 @@ function App() {
     <h2 id="main-menu-heading" className="sr-only">Main menu</h2>
    <div id="lis">
     <ul aria-labelledby="main-menu-heading" id="lis">
-      <li><Link to="/Products" className="lisbox">Products</Link></li>
-      <li><a href="#" className="lisbox">About us</a></li>
-      <li><a href="#" className='lisbox'>Contact us</a></li>
+      <li><Link to="productspage" className="lisbox">Products</Link></li>
+      <li><Link to="aboutuspage" className="lisbox">About Us</Link></li>
+      <li><Link to="contactuspage" className="lisbox">Contact Us</Link></li>
     </ul>
     </div>
   </nav>
