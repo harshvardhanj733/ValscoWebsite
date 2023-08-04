@@ -15,7 +15,6 @@ function App() {
   </a>
   <img src={require("./logooo.png")} id="tl" alt="Logo" />
   <h1 className="logo">Valsco Technology</h1>
-  
   <nav id="main-menu" className="main-menu" aria-label="Main menu">
     <a href="#main-menu-toggle"
        id="main-menu-close"
@@ -27,7 +26,7 @@ function App() {
     <h2 id="main-menu-heading" className="sr-only">Main menu</h2>
    <div id="lis">
     <ul aria-labelledby="main-menu-heading" id="lis">
-      <li><Link to="/Products" className="lixbox">Products</Link></li>
+      <li><Link to="/Products" className="lisbox">Products</Link></li>
       <li><a href="#" className="lisbox">About us</a></li>
       <li><a href="#" className='lisbox'>Contact us</a></li>
     </ul>
