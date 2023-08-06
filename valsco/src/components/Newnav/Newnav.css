@@ -74,7 +74,7 @@ li{
   }
   .main-menu a:hover,
   .main-menu a:focus {
-    background: #333;
+    background: transparent;
     text-decoration: none;
   }
   .main-menu .menu-close {
@@ -157,6 +157,7 @@ li{
       margin-right: 0%;
       width: fit-content;
     }
+
     
   }
   @media only screen and (max-width: 600px){
@@ -174,6 +175,12 @@ header{
   padding: 0px;
   margin: 0px;
 }
+#main-menu-close{
+  background: #000;
+}
+.main-menu:target .menu-close, .main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+  background: black;}
 }
   header {
     padding: 20px;

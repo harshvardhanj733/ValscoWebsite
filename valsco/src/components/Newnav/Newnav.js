@@ -1,8 +1,10 @@
 
 import './Newnav.css';
 import {Link} from 'react-scroll'
+import React, { useState } from 'react';
 import {BrowserRouter,NavLink} from "react-router-dom";
 function App() {
+  const [visible, setVisible] = useState(false)
   return (
     
 
@@ -16,7 +18,7 @@ function App() {
   </a>
   <img src={require("./logooo.png")} id="tl" alt="Logo" />
   <h1 className="logo">Valsco Technology</h1>
-  <nav id="main-menu" className="main-menu" aria-label="Main menu">
+  <nav id="main-menu" className="main-menu" aria-label="Main menu" >
     <a href="#main-menu-toggle"
        id="main-menu-close"
        className="menu-close"
@@ -27,10 +29,10 @@ function App() {
     <h2 id="main-menu-heading" className="sr-only">Main menu</h2>
    <div id="lis">
     <ul aria-labelledby="main-menu-heading" id="lis">
-      <li><Link to="productspage" className="lisbox">Products</Link></li>
-      <li><Link to="aboutuspage" className="lisbox">About Us</Link></li>
+      <li><a href="#productspage" className="lisbox"  >Products</a></li>
+      <li><a href="#aboutuspage" className="lisbox">About Us</a></li>
       <li><NavLink to="/BlogHome" className="lisbox">Blogs</NavLink></li>
-      <li><Link to="contactuspage" className="lisbox">Contact Us</Link></li>
+      <li><a href="#contactuspage" className="lisbox">Contact Us</a></li>
     </ul>
     </div>
   </nav>
@@ -42,5 +44,4 @@ function App() {
 
   );
 }
-
 export default App;
