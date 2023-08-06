@@ -1,7 +1,7 @@
 
 import './Newnav.css';
 import {Link} from 'react-scroll'
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter,NavLink} from "react-router-dom";
 function App() {
   return (
     
@@ -29,6 +29,7 @@ function App() {
     <ul aria-labelledby="main-menu-heading" id="lis">
       <li><Link to="productspage" className="lisbox">Products</Link></li>
       <li><Link to="aboutuspage" className="lisbox">About Us</Link></li>
+      <li><NavLink to="/BlogHome" className="lisbox">Blogs</NavLink></li>
       <li><Link to="contactuspage" className="lisbox">Contact Us</Link></li>
     </ul>
     </div>

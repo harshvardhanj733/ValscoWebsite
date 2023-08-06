@@ -5,9 +5,8 @@ import { auth, provider } from "../firebase-config";
 import "../../Blogs/Blogs.css";
 import "./StyleBlog.css";
 
-
-
-export default function Navbar(props) {
+export default function Navbar(props){
+  
   let [click, setClick] = useState(true);
   let navigate = useNavigate();
   const signUserOut = () => {
@@ -36,7 +35,7 @@ export default function Navbar(props) {
           <span className="sr-only">Open main menu</span>
           <span className="fa fa-bars" aria-hidden="true"></span>
         </a>
-        <img src={require("././logooo.png")} id="tl" alt="Logo" />
+        <img src={require("./logooo.png")} id="tl" alt="Logo" />
         <h1 className="logo">Valsco Technology</h1>
         <nav id="main-menu" className="main-menu" aria-label="Main menu">
           <a
@@ -64,7 +63,7 @@ export default function Navbar(props) {
                 </Link>
               </li>
               <li>
-              {!props.authenticated? (
+                {!props.authenticated ? (
                   <Link className="lisbox" to="/Login">
                     Create Blog
                   </Link>
@@ -75,7 +74,7 @@ export default function Navbar(props) {
                 )}
               </li>
               <li>
-              {props.authenticated? (
+                {props.authenticated ? (
                   <Link className="lisbox" onClick={signUserOut}>
                     Log Out
                   </Link>

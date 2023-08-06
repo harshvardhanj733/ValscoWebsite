@@ -95,6 +95,16 @@ body{
   color: black;
 }
 
+@media screen and (max-width:768px) {
+  .abtus .info img {
+    width: 50%;
+    margin-left: 115px;
+  }
+  .abtus .info p{
+    padding-left: 110px;
+  }
+}
+
 .abtus .sep{
   color: hsla(191, 75%, 60%, 1);
   color: linear-gradient(
@@ -138,7 +148,7 @@ body{
 }
 .cardu {
   width: 47%;
-  height:33%;
+  height:30%;
   margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
@@ -168,6 +178,7 @@ body{
   box-shadow: 5px 5px 10px black;
   transform: scale(1.02);
 }
+
 .sp{
   opacity: 0;
 }
@@ -427,9 +438,7 @@ $blueColor:rgba(33,150,243,1); */
   color: greenyellow;
 }
 
-.b-form .PhoneInputInput {
-  /* border-bottom: none; */
-}
+
 .b-form .yt .PhoneInputInput {
   border-bottom: 2px solid red;
 }
@@ -466,3 +475,37 @@ $blueColor:rgba(33,150,243,1); */
 padding: 5px 45px 5px 45px;
 }
 }
+
+@media screen and (max-width:768px) {
+
+  .cardu{
+     height: 35%;
+  }
+  .card{
+    margin-left: 5%;
+  }
+
+  .abtus .info p{
+    right: 20%;
+  }
+ .card{
+
+  height: 400px;
+    
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+
+  .cardu{
+    height: 23%;
+  }
+  
+}
+
+@media screen and (min-width:576px) and (max-width:1000px){
+  .cardu{
+    height: 20%;
+  }
+}
+
