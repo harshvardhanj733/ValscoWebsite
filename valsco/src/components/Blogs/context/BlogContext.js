@@ -33,7 +33,7 @@ const AppProvider=({children})=>{
                 obj.id=temp;
                 blogList.push(obj);
             }
-            console.log(blogList);
+            // console.log(blogList);
             dispatch({type:"MY_BLOG_DATA",payload:blogList});   
         }
         catch(error){

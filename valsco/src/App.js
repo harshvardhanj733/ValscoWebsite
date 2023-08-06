@@ -16,7 +16,7 @@ import Newnav from './components/Newnav/Newnav';
 
 function App() {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false);
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(localStorage.getItem("authenticated"));
 
   const [alertMsg,setAlertMsg] = useState(localStorage.getItem("alertMsg"));
   const [alertColor,setAlertColor] = useState(localStorage.getItem("alertColor"));

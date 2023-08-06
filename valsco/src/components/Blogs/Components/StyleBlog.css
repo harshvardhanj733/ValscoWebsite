@@ -454,6 +454,7 @@ Swiper {
   padding: 20px;
   width: 350px;
   box-shadow: 0px 0px 10px 2px lightgrey;
+  padding-top: 40px;
 }
 /* .blog-card:hover {
   border: 1px solid green;

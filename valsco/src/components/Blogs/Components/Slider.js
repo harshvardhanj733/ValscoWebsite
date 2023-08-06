@@ -14,6 +14,8 @@ SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 export default function Slider({ authenticated }) {
   const { isLoading, blogs, getPosts } = useBlogContext();
   const postsCollectionRef = collection(db, "blogPosts");
+  const blogsFinal = blogs.length>3 ? [blogs[0],blogs[1],blogs[2]] : blogs;
+  
 
   if (isLoading === true) {
     return (
@@ -26,6 +28,7 @@ export default function Slider({ authenticated }) {
     await deleteDoc(blogdelete);
     window.location.reload(false);
   };
+
 
   return (
     <>
@@ -45,11 +48,10 @@ export default function Slider({ authenticated }) {
           pagination={false}
           className="mySwiper"
         >
-          {blogs.map((currentElement) => {
+          {blogsFinal.map((currentElement) => {
             return (
-              <SwiperSlide className="swiperslide">
+              <SwiperSlide className="swiperslide" key={currentElement.id}>
                 <section className="swiper-slide-card">
-                  <img src={require("../../../components/images/blog-logo.png")} id="valsco-logo" />
                   <h3 className="swiper-slide-title">{currentElement.title}</h3>
                   <p className="swiper-slide-desc">{currentElement.postText.slice(0, 250)}...</p>
                   <p className="swiper-slide-author">@{currentElement.author.name}</p>
@@ -62,7 +64,7 @@ export default function Slider({ authenticated }) {
                     </Link>
                     {authenticated &&
                       auth.currentUser &&
-                      auth.currentUser.uid == currentElement.author.id && (
+                      auth.currentUser.uid === currentElement.author.id && (
                         <button
                           className="blog-card-delete-btn"
                           onClick={() => deleteBlog(currentElement.id)}
