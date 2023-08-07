@@ -16,7 +16,7 @@ function LandingPage() {
           </div>
           <div className="para">
               <div><h1>VALSCO</h1></div>
-              <div><p className="para1">
+              <div className="para1"><p>
                 Our company provides software products and services to businesses
                 individuals to help them meet their software needs. We strive to
                 specialize in developing software solutions tailored to the unique

@@ -1,10 +1,10 @@
-body{
+body {
   overflow-x: hidden;
 }
 .card {
   margin-top: 15%;
   border: none;
-  height:600px;
+  height: 600px;
 }
 .abtus {
   display: flex;
@@ -13,8 +13,8 @@ body{
 }
 
 .abtus {
-  background-color:#fff;
-  background-size:cover;
+  background-color: #fff;
+  background-size: cover;
 }
 
 .abtus {
@@ -43,8 +43,8 @@ body{
   justify-content: center;
   align-self: center;
 }
-.abtus .header h1{
-  font-size:x-large;
+.abtus .header h1 {
+  font-size: x-large;
 }
 .abtus .content {
   align-self: flex-start;
@@ -77,13 +77,13 @@ body{
 }
 
 .abtus .info p1 {
-   margin-top: 5%;
-   color: black;
-   position: relative;
-   left: 14%;
-   font-size: large;
-   letter-spacing: 2px;
-   width: 80%;
+  margin-top: 5%;
+  color: black;
+  position: relative;
+  left: 14%;
+  font-size: large;
+  letter-spacing: 2px;
+  width: 80%;
 }
 
 .abtus .info p {
@@ -95,17 +95,17 @@ body{
   color: black;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .abtus .info img {
     width: 50%;
     margin-left: 115px;
   }
-  .abtus .info p{
+  .abtus .info p {
     padding-left: 110px;
   }
 }
 
-.abtus .sep{
+.abtus .sep {
   color: hsla(191, 75%, 60%, 1);
   color: linear-gradient(
     90deg,
@@ -124,7 +124,7 @@ body{
     hsla(191, 75%, 60%, 1) 0%,
     hsla(248, 87%, 36%, 1) 100%
   );
-  opacity: 0.90;
+  opacity: 0.9;
 }
 #h1 {
   color: cadetblue;
@@ -148,7 +148,7 @@ body{
 }
 .cardu {
   width: 47%;
-  height:30%;
+  height: 30%;
   margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
@@ -179,22 +179,22 @@ body{
   transform: scale(1.02);
 }
 
-.sp{
+.sp {
   opacity: 0;
 }
-.sap{
+.sap {
   opacity: 0;
 }
-.ap{
+.ap {
   opacity: 0;
 }
-.card-body:hover .sp{
+.card-body:hover .sp {
   opacity: 1;
 }
-.card-body:hover .sap{
+.card-body:hover .sap {
   opacity: 1;
 }
-.card-body:hover .ap{
+.card-body:hover .ap {
   opacity: 1;
 }
 .bottom {
@@ -236,7 +236,7 @@ body{
   cursor: grab;
   transform: scaleX(1);
 }
-.card-body{
+.card-body {
   margin-bottom: 70%;
   text-align: center;
 }
@@ -297,7 +297,7 @@ body{
   background-color: transparent;
   color: white;
 }
-.b-form input:hover{
+.b-form input:hover {
   background-color: transparent;
   color: white;
   border-bottom: 2px solid silver;
@@ -316,9 +316,9 @@ body{
   border: 2px solid silver;
   color: silver;
 }
-#buton{
+#buton {
   background: hsla(191, 75%, 60%, 1);
-  color:#fff;
+  color: #fff;
   background: linear-gradient(
     90deg,
     hsla(191, 75%, 60%, 1) 0%,
@@ -336,15 +336,16 @@ body{
     hsla(191, 75%, 60%, 1) 0%,
     hsla(248, 87%, 36%, 1) 100%
   );
-  opacity: 0.90;
+  opacity: 0.9;
+  margin-bottom: 5rem;
 }
-#buton:hover{
+#buton:hover {
   box-shadow: 5px 5px 10px black;
   transform: scale(1.02);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4DC9E6", endColorstr="#210CAE", GradientType=1);
   color: aliceblue;
   transition: 1s, background-color 1s, color 1s, font-weight 1s,
-  border-radius 1s;
+    border-radius 1s;
 }
 .transparent-button {
   background: transparent;
@@ -393,11 +394,11 @@ $blueColor:rgba(33,150,243,1); */
 .intl-tel-input .country-list {
   z-index: 5;
 }
-.input-container{
+.input-container {
   position: relative;
   right: 4%;
 }
-.input-container input{
+.input-container input {
   padding-left: 50%;
 }
 @keyframes icon3d {
@@ -419,7 +420,7 @@ $blueColor:rgba(33,150,243,1); */
 }
 .foot .f.flex-center i {
   font-size: 4px;
-}  
+}
 .invalid-number input {
   background-color: red;
 }
@@ -432,28 +433,27 @@ $blueColor:rgba(33,150,243,1); */
   font-family: sans-serif;
   font-size: small;
   border: none;
-} 
-
-.validity{
-  color: greenyellow;
 }
 
+.validity {
+  color: greenyellow;
+}
 
 .b-form .yt .PhoneInputInput {
   border-bottom: 2px solid red;
 }
 @media (max-width: 768px) {
-  .header{
+  .header {
     text-align: center;
   }
-  .abtus{
+  .abtus {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     align-content: center;
   }
-  .content{
+  .content {
     display: flex;
     flex-direction: flex-start;
     justify-content: center;
@@ -462,50 +462,49 @@ $blueColor:rgba(33,150,243,1); */
     padding: 0px;
     width: 100%;
   }
-  .float-left{
+  .float-left {
     margin-left: 205%;
   }
-  .info{
+  .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
   }
-.peoppara{
-padding: 5px 45px 5px 45px;
-}
-}
-
-@media screen and (max-width:768px) {
-
-  .cardu{
-     height: 35%;
+  .peoppara {
+    text-align: center;
   }
-  .card{
+  .privacy p1 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardu {
+    height: 35%;
+  }
+  .card {
     margin-left: 5%;
   }
-
-  .abtus .info p{
+  .peoppara {
+    text-align: center;
+  }
+  .abtus .info p {
     right: 20%;
   }
- .card{
-
-  height: 400px;
-    
+  .card {
+    height: 400px;
   }
 }
 
-@media screen and (min-width:769px) and (max-width:1200px) {
-
-  .cardu{
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .cardu {
     height: 23%;
   }
-  
 }
 
-@media screen and (min-width:576px) and (max-width:1000px){
-  .cardu{
+@media screen and (min-width: 576px) and (max-width: 1000px) {
+  .cardu {
     height: 20%;
   }
 }
-

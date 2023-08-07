@@ -27,7 +27,12 @@ background: -webkit-linear-gradient(
   margin-top: 15%;
   margin-left: 10%;
   font-family: sans-serif;
-}.main{
+}
+.para h1{
+  font-weight: 600;
+  font-size: 4rem;
+}
+.main{
   padding-top: 7%;
   display: flex;
   flex-direction: row;
@@ -35,19 +40,15 @@ background: -webkit-linear-gradient(
 }
 
 .para1 {
-  width: 80%; /* Adjust the percentage value to your desired width */
-  max-width: 600px; /* Set a maximum width to limit the box size */
-  /* Adjust the height to your desired value */
-  overflow: auto;
   font-family: sans-serif;
+  padding-left:22px;
+  padding-right:22px;
 }
 
 .img1 {
   width: 30%;
-  margin-left: 10%;
-  margin-top: 18%;
 }
-.img .img1 {
+.img {
   width: 50%;
 }
 .front {
@@ -64,16 +65,10 @@ background: -webkit-linear-gradient(
   width: 100%;
 }
   .img1{
+    display: flex;
     justify-content: center;
-    /* height:8vh; */
-    scale: .7;
-    margin-left: -35%;
+    scale: 0.7;
     
-  }
-  #lgo{
-    /* margin-bottom: -80%; */
-    /* padding-top: 200px; */
-
   }
   .front{
 
@@ -87,7 +82,6 @@ background: -webkit-linear-gradient(
     padding: 0px 0px 0px 0px;
   }
   .para{
-    margin:0px;
     margin-top: 5rem;
     display: flex;
     justify-content: center;
@@ -97,11 +91,8 @@ background: -webkit-linear-gradient(
     text-align:center ;
   }
   .para1{
-    width: 100%;
-    text-align:center;
-    margin-top:50px;
-    padding-left: 22px;
-    padding-right: 22px;;
+    text-align: center;
+    margin-right:50px;
   }
   .main{
     display: flex;
