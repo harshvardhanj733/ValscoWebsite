@@ -41,15 +41,14 @@ background: -webkit-linear-gradient(
 
 .para1 {
   font-family: sans-serif;
-  padding-left:22px;
-  padding-right:22px;
+  width:50%;
 }
 
-.img1 {
-  width: 30%;
-}
-.img {
-  width: 50%;
+.img1{
+  display: flex;
+  justify-content: center;
+  scale: 0.7;
+  
 }
 .front {
   display: flex;
