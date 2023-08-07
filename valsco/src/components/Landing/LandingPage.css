@@ -89,9 +89,10 @@ background: -webkit-linear-gradient(
   h1{
     text-align:center ;
   }
-  .para1{
-    text-align: center;
-    margin-right:50px;
+  .para1  p{
+     text-align: center;
+     margin-left: 120px;
+     width:100%;
   }
   .main{
     display: flex;
