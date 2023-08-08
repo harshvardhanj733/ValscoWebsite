@@ -91,11 +91,10 @@ background: -webkit-linear-gradient(
     text-align: center;
   }
   .para p{
-    margin-left: 35%;
+    width:20rem;
+    margin-left: 5%;
+    margin-right: 5%;
     }
-  h1{
-    text-align:center ;
-  }
   .main{
     display: flex;
     flex-direction: column; 
