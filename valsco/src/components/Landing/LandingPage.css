@@ -41,7 +41,7 @@ background: -webkit-linear-gradient(
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap:10rem;
+  gap:15rem;
 
 }
 
