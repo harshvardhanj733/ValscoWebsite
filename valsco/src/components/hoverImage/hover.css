@@ -10,7 +10,8 @@
 }
 @media (max-width: 768px) {
     .softimage{
-        display: none;
+        width:100%;
+        height:50vh;
     }
 }
 
