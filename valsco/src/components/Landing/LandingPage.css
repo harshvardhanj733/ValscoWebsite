@@ -69,6 +69,7 @@ background: -webkit-linear-gradient(
 #root{
   width: 100%;
 }
+.wraper{height:80vh;}
   .img1{
     display: flex;
     justify-content: center;
@@ -98,6 +99,7 @@ background: -webkit-linear-gradient(
   .main{
     display: flex;
     flex-direction: column; 
+    gap:5rem;
   }
   
 }
