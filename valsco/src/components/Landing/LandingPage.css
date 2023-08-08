@@ -24,13 +24,17 @@ background: -webkit-linear-gradient(
   background-color: black;
 } */
 .para {
+  /* width: fit-content; */
   margin-top: 4%;
   margin-left: 10%;
   font-family: sans-serif;
 }
-.para h1{
+.para span{
   font-weight: 600;
   font-size: 4rem;
+}
+.para p{
+  width:40vw;
 }
 .main{
   padding-top: 7%;
@@ -81,18 +85,13 @@ background: -webkit-linear-gradient(
     padding: 0px 0px 0px 0px;
   }
   .para{
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    text-align: center;
   }
+  .para p{
+    margin-left: 25%;
+    }
   h1{
     text-align:center ;
-  }
-  .para1  p{
-     text-align: center;
-     margin-left: 120px;
-     width:100%;
   }
   .main{
     display: flex;
