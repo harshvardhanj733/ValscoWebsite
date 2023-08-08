@@ -476,6 +476,7 @@ $blueColor:rgba(33,150,243,1); */
   }
   .peoppara {
     text-align: center;
+    padding:0px;
   }
   .privacy p1 {
     font-size: 18px;
@@ -491,6 +492,8 @@ $blueColor:rgba(33,150,243,1); */
   }
   .peoppara {
     text-align: center;
+    padding:0px;
+    margin: 20px;
   }
   .abtus .info p {
     right: 20%;
