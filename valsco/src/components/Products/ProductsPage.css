@@ -162,6 +162,8 @@
   .lap1 {
     width: 100vw;
     height: 42vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .fulls {
