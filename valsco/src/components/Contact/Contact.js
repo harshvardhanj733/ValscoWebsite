@@ -83,22 +83,21 @@ function Contact() {
           },
           body: JSON.stringify({ name: newContact.name, email: newContact.email, number: newContact.number, company: newContact.company })
         })
-
         console.log(response);
+        alert("Succesfully submitted");
 
         let savedEmail = newContact.email;
         let savedName = newContact.name;
         setNewContact({ name: '', email: '', number: '', company: '' });
-        const response2 = await fetch(backendURL, {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            'Content-Type': "application/json"
-          },
-          body: JSON.stringify({ name:savedName, email: savedEmail })
-        })
+        // const response2 = await fetch(backendURL, {
+        //   method: "POST",
+        //   mode: "cors",
+        //   headers: {
+        //     'Content-Type': "application/json"
+        //   },
+        //   body: JSON.stringify({ name:savedName, email: savedEmail })
+        // })
 
-        console.log(response2)
 
       }
       else {

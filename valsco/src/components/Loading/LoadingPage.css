@@ -21,7 +21,7 @@
   /* animation-fill-mode: forwards; */
 }
 
-.plan{
+.plan {
   overflow-y: hidden;
 }
 
@@ -37,7 +37,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1600px) {
+@media only screen and (min-width: 992px) and (max-width: 2000px) {
   span {
     padding-right: 20px;
   }
@@ -47,7 +47,6 @@
     font-size: 100px;
     padding-top: 280px;
   }
-
 
   /* Loading animation */
 
@@ -189,7 +188,7 @@
     font-size: 100px;
     padding-top: 280px;
   }
-/* 
+  /* 
   .body {
     height: 200vh;
     background-color: cadetblue;
@@ -470,7 +469,7 @@
   span {
     padding-right: 8px;
   }
-/* 
+  /* 
   body {
     overflow-y: hidden;
     overflow-x: hidden;
@@ -612,8 +611,7 @@
   }
 }
 
-
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 400px) {
   span {
     padding-right: 8px;
   }
@@ -623,7 +621,6 @@
     font-size: 100px;
     padding-top: 280px;
   }
-
 
   /* Loading animation */
 
@@ -748,7 +745,4 @@
       opacity: 0;
     }
   }
-
-
-
 }

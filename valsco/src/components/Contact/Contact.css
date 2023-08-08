@@ -276,9 +276,12 @@ body {
 .form .p-contact {
   font-size: medium;
   margin-top: 4%;
-  margin-left: 5%;
-  margin-right: 60%;
+  margin-left: 4%;
   font-family: sans-serif;
+}
+.p-contact{
+  width:50vw;
+
 }
 .b-form {
   margin-top: 8%;
@@ -506,5 +509,8 @@ $blueColor:rgba(33,150,243,1); */
 @media screen and (min-width: 576px) and (max-width: 1000px) {
   .cardu {
     height: 20%;
+  }
+  .p-contact {
+    width:70vw;
   }
 }
