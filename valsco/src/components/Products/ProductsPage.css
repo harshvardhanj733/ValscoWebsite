@@ -6,24 +6,22 @@
   .lap1 {
 
     width: 100vw;
-    height: 100vh;
+    height: 79vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   .fulls {
-    /* margin: 10px; */
+
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
     width: 100vw;
-    /* height: 50vh; */
-    gap: 2px;
   }
 
   .mock1 {
     transition: 0.6s;
     width: 280px;
-    /* height: 500px; */
 
   }
 
@@ -60,18 +58,18 @@
   .lap1 {
 
     width: 100vw;
-    height: 95vh;
+    height: 70vh;
   }
 
   .fulls {
-    margin: 10px;
+  
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100vw;
-    height: 100vh;
-    gap: 2px;
+    height: 70vh;
+
   }
 
   .mock1 {
@@ -112,18 +110,17 @@
 
   .lap1 {
     width: 100vw;
-    height: 95vh;
+    height: 66vh;
+
   }
 
   .fulls {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    gap: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        height: 66vh;
   }
 
   .mock1 {
@@ -168,14 +165,12 @@
   }
 
   .fulls {
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 100vw;
     height: 36vh;
-    gap: 2px;
   }
 
   .mock1 {
