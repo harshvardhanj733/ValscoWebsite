@@ -150,7 +150,6 @@ li{
     .main-menu a:hover,
     .main-menu a:focus {
       background: none;
-      color: #c00;
 
     }
     .logo{
@@ -160,7 +159,7 @@ li{
 
     
   }
-  @media only screen and (max-width: 600px){
+  @media only screen and (max-width: 780px){
   #tl {
     display: none;
 }
