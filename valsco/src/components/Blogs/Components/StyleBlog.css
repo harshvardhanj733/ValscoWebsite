@@ -126,10 +126,13 @@ li{
       position: fixed;
     }
   }
-  @media (min-width: 800px) {
-    .menu-toggle,
+  @media (max-width: 800px) {
+    /* .menu-toggle,
     .main-menu .menu-close {
       display: none;
+    } */
+    .menu-close{
+      background-color: #06c;
     }
     .main-menu {
       overflow: hidden;
@@ -148,6 +151,7 @@ li{
       height: auto;
       width: auto;
       background: none;
+      flex-direction: column;
     }
     
     .main-menu a {

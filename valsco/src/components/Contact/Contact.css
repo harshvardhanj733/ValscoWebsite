@@ -535,3 +535,34 @@ input:focus:invalid{
   font-size: large;
   color: green;
 }
+
+#formSubmitButton{
+  background: hsla(191, 75%, 60%, 1);
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(191, 75%, 60%, 1) 0%,
+    hsla(248, 87%, 36%, 1) 100%
+  );
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .form{
+    margin-top: 25%;
+  }
+  .App
+  {
+    margin-bottom: 100px;
+  }
+}
