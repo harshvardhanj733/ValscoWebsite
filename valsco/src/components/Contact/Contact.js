@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, set } from "react-hook-form";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import validator from 'validator';
@@ -19,26 +19,31 @@ function Contact() {
   // } = useForm();
 
   const [newContact, setNewContact] = useState({ name: '', email: '', number: '', company: '' })
+  const [isValid, setIsValid] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  function ValidateEmail(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-      return true
-    }
-    return false
-  }
+  // function ValidateEmail(mail) {
+  //   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+  //     return true
+  //   }
+  //   return false
+  // }
 
-  function phonenumber(inputtxt) {
-    var phoneno = /^\d{10}$/;
-    if (inputtxt.match(phoneno)) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+  // function phonenumber(inputtxt) {
+  //   var phoneno = /^\d{10}$/;
+  //   if (inputtxt.match(phoneno)) {
+  //     return true;
+  //   }
+  //   else {
+  //     return false;
+  //   }
+  // }
 
   const handleOnChange = (e) => {
     setNewContact({ ...newContact, [e.target.name]: e.target.value })
+    const inputs = document.querySelectorAll('input');
+    const validity = [...inputs].every(input => input.checkValidity());
+    setIsValid(!validity);
   }
 
   // const [isButtonClicked, setIsButtonClicked] = useState(false); // State variable to track button click
@@ -74,7 +79,10 @@ function Contact() {
     const url = "https://website-bad9f-default-rtdb.asia-southeast1.firebasedatabase.app/contactUsRecords.json"
 
     try {
-      if (ValidateEmail(newContact.email) && phonenumber(newContact.number) && newContact.name.length >= 3 && newContact.company.length >= 3) {
+      newContact.name = newContact.name.trim();
+      newContact.email = newContact.email.trim();
+      newContact.company = newContact.company.trim();
+      // if (ValidateEmail(newContact.email) && phonenumber(newContact.number) && newContact.name.length >= 3 && newContact.company.length >= 3) {
         const response = await fetch(url, {
           method: "POST",
           mode: "cors",
@@ -83,43 +91,48 @@ function Contact() {
           },
           body: JSON.stringify({ name: newContact.name, email: newContact.email, number: newContact.number, company: newContact.company })
         })
-        console.log(response);
-        alert("Succesfully submitted");
 
+        // console.log(response);
+        setIsSuccess(true);
+        setIsValid(true);
         let savedEmail = newContact.email;
         let savedName = newContact.name;
-        setNewContact({ name: '', email: '', number: '', company: '' });
-        // const response2 = await fetch(backendURL, {
-        //   method: "POST",
-        //   mode: "cors",
-        //   headers: {
-        //     'Content-Type': "application/json"
-        //   },
-        //   body: JSON.stringify({ name:savedName, email: savedEmail })
-        // })
+        setTimeout(() => {
+          setIsSuccess(false);
+          setNewContact({ name: '', email: '', number: '', company: '' });
+        }, 3000);
+        const response2 = await fetch(backendURL, {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            'Content-Type': "application/json"
+          },
+          body: JSON.stringify({ name:savedName, email: savedEmail })
+        })
 
+        console.log(response2)
 
-      }
-      else {
-        if(newContact.name.length < 3){
-          alert("Please Fill The Name Correctly. Name Should Be Atleast 3 Characters Long");
-        }
-        else if(!ValidateEmail(newContact.email)){
-          alert("Please Fill The Email Correctly")
-        }
-        else if(!phonenumber(newContact.number)){
+      // }
+      // else {
+      //   if(newContact.name.length < 3){
+      //     alert("Please Fill The Name Correctly. Name Should Be Atleast 3 Characters Long");
+      //   }
+      //   else if(!ValidateEmail(newContact.email)){
+      //     alert("Please Fill The Email Correctly")
+      //   }
+      //   else if(!phonenumber(newContact.number)){
          
-          if(!isNaN(newContact.number)){
-             alert(`Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. Currently You Have Filled ${newContact.number.length} digits.`)
-          }
-          else{
-            alert('Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. It should not contain any Alphabets or Special Characters.')
-          }
-        }
-        else{
-          alert("Company Should Be Atleast 3 Characters Long")
-        }
-      }
+      //     if(!isNaN(newContact.number)){
+      //        alert(`Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. Currently You Have Filled ${newContact.number.length} digits.`)
+      //     }
+      //     else{
+      //       alert('Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. It should not contain any Alphabets or Special Characters.')
+      //     }
+      //   }
+      //   else{
+      //     alert("Company Should Be Atleast 3 Characters Long")
+      //   }
+      // }
 
     } catch (error) {
       alert(`The Following Error Occured: ${error}.\nKindly Try Again!`)
@@ -245,7 +258,10 @@ function Contact() {
                 value={newContact.name}
                 placeholder="Your Name"
                 name="name"
+                required
+                pattern="^[A-Za-z\s.]{3,50}$"
               />
+              <span className="inputSpan">Name should be 3-50 Characters Long</span>
             </div>
             <div className="form-row">
               <label htmlFor="email">Email</label>
@@ -257,7 +273,9 @@ function Contact() {
                 value={newContact.email}
                 placeholder="Your Email"
                 name="email"
+                required
               />
+              <span className="inputSpan">Please enter a Valid Email!</span>
             </div>
             <div className="form-row">
               <div>
@@ -270,7 +288,10 @@ function Contact() {
                 value={newContact.number}
                 placeholder="Your Phone Number"
                 name="number"
+                required
+                pattern="^(?:\+91\d{10}|\d{10})$"
               />
+                <span className="inputSpan">Please Enter a Valid Phone Number</span>
                 {/* <Controller
                   name="phoneInput" // Make sure this matches the name used in data.phoneInput
                   control={control}
@@ -303,17 +324,22 @@ function Contact() {
                 value={newContact.company}
                 placeholder="Your Company/Organisation"
                 name="company"
+                required
+                pattern="^[A-Za-z\s0-9]{3,100}$"
               />
+              <span className="inputSpan">Company Name Should be 3-50 Characters Long</span>
             </div>
             <button
               type="submit"
               className="btn btn-primary transparent-button"
-              id="buton"
+              id="formSubmitButton"
               onClick={handleFormSubmit}
+              disabled={isValid}
             // disabled={!!errors["phone-input"]}
             >
               Click to send your message
             </button>
+            {isSuccess&&<div id="successfulMessage">Your Message Sent Successfully!</div>}
           </form>
         </div>
       </div>

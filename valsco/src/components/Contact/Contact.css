@@ -517,3 +517,21 @@ $blueColor:rgba(33,150,243,1); */
     width:70vw;
   }
 }
+
+.inputSpan{
+  color: red;
+  display: none;
+}
+
+input:focus:invalid ~ .inputSpan{
+  display: block;
+}
+
+input:focus:invalid{
+  border: 3px solid red;
+}
+
+#successfulMessage{
+  font-size: large;
+  color: green;
+}
