@@ -17,15 +17,15 @@ app.post('/', async (req, res) => {
         const {name, email} = req.body;
 
         const Client = {
-            from: process.env.EMAIL,
+            from: "connect@valscotech.com",
             to: email,
             subject: "Form Submitted Successfully",
-            text: "Thank You for contacting me, We will reply to you shortly!"
+            text: "Thank You for contacting us, We will reply to you shortly!"
         }
 
         const Admin = {
-            from: process.env.EMAIL,
-            to: process.env.ADMIN_EMAIL,
+            from: "connect@valscotech.com",
+            to: "connect@valscotech.com",
             subject: "Contact Form Submitted",
             text: `By ${name}, ${email} `
         }
