@@ -5,7 +5,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import validator from 'validator';
 
-const backendURL = "http://localhost:3002";
+const backendURL = "http://localhost:5000";
 
 const PHONE_REGEX = new RegExp(
   /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,3}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/
@@ -50,16 +50,16 @@ function Contact() {
           setIsSuccess(false);
           setNewContact({ name: '', email: '', number: '', company: '' });
         }, 3000);
-        // const response2 = await fetch(backendURL, {
-        //   method: "POST",
-        //   mode: "cors",
-        //   headers: {
-        //     'Content-Type': "application/json"
-        //   },
-        //   body: JSON.stringify({ name:savedName, email: savedEmail })
-        // })
+        const response2 = await fetch(backendURL, {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            'Content-Type': "application/json"
+          },
+          body: JSON.stringify({ name:savedName, email: savedEmail })
+        })
 
-        // console.log(response2)
+        console.log(response2)
 
     } catch (error) {
       alert(`The Following Error Occured: ${error}.\nKindly Try Again!`)
