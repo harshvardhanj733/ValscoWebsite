@@ -14,7 +14,7 @@ app.use(cors({
 
 app.post('/', async (req, res) => {
     try {
-        const {name, email} = req.body;
+        const { name, email } = req.body;
 
         const Client = {
             from: "connect@valscotech.com",
@@ -32,22 +32,32 @@ app.post('/', async (req, res) => {
 
         const optArray = [Client, Admin];
 
-        optArray.forEach((option) => {
-            transporter.sendMail(option, (err, info) => {
-                if (err) {
-                    console.log(err)
-                    return;
-                }
-                console.log("Sent" + info.response)
-                console.log(`Message sent successfully to ${option.to}`)
-            })
+        // Use map to create an array of promises
+        const emailPromises = optArray.map(option => {
+            return new Promise((resolve, reject) => {
+                transporter.sendMail(option, (err, info) => {
+                    if (err) {
+                        console.log(err);
+                        reject(err);
+                    } else {
+                        console.log(`Message sent successfully to ${option.to}`);
+                        resolve(info);
+                    }
+                });
+            });
         });
-    }
-    catch (error) {
+
+        // Wait for all promises to resolve using Promise.all
+        await Promise.all(emailPromises);
+
+        console.log("All messages sent successfully!");
+        res.status(200).send("Emails sent successfully!");
+    } catch (error) {
         console.error(error.message);
-        res.status(500).send("An Error Occured!");
+        res.status(500).send("An Error Occurred!");
     }
-})
+});
+
 
 app.listen(port, () => {
     console.log(`the application has started successfully on localhost: http://localhost:${port}`);

@@ -12,32 +12,9 @@ const PHONE_REGEX = new RegExp(
 );
 
 function Contact() {
-  // const {
-  //   handleSubmit,
-  //   formState: { errors },
-  //   control
-  // } = useForm();
-
   const [newContact, setNewContact] = useState({ name: '', email: '', number: '', company: '' })
   const [isValid, setIsValid] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
-
-  // function ValidateEmail(mail) {
-  //   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-  //     return true
-  //   }
-  //   return false
-  // }
-
-  // function phonenumber(inputtxt) {
-  //   var phoneno = /^\d{10}$/;
-  //   if (inputtxt.match(phoneno)) {
-  //     return true;
-  //   }
-  //   else {
-  //     return false;
-  //   }
-  // }
 
   const handleOnChange = (e) => {
     setNewContact({ ...newContact, [e.target.name]: e.target.value })
@@ -46,35 +23,8 @@ function Contact() {
     setIsValid(!validity);
   }
 
-  // const [isButtonClicked, setIsButtonClicked] = useState(false); // State variable to track button click
-  // const [num, setnum] = useState(0);
-
-  // const [errorMessage, setErrorMessage] = useState(null); // State variable to track button click
-  // const [bi, setbi] = useState(0);
-
-  // function Convert(event) {
-  //   setnum(event.target.value);
-  // }
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // setIsButtonClicked(true); // Set the state to indicate button click
-    // console.log(data.phoneInput); // Log the phone input value
-    // Perform form submission logic here
-
-    // const isIndianNumber = data.phoneInput.startsWith('+91');
-    // const isValidIndianNumber = isIndianNumber && data.phoneInput.length === 13;
-
-    // if (isIndianNumber && !isValidIndianNumber) {
-    //   // Invalid Indian phone number, display error message
-    //   setErrorMessage('*Invalid number');
-    //   return;
-    // }
-
-    // // Non-Indian phone number or valid Indian phone number, continue with form submission logic
-    // setbi(1);
-    // setErrorMessage(null);
-    // Perform your form submission logic here
 
     const url = "https://website-bad9f-default-rtdb.asia-southeast1.firebasedatabase.app/contactUsRecords.json"
 
@@ -82,7 +32,6 @@ function Contact() {
       newContact.name = newContact.name.trim();
       newContact.email = newContact.email.trim();
       newContact.company = newContact.company.trim();
-      // if (ValidateEmail(newContact.email) && phonenumber(newContact.number) && newContact.name.length >= 3 && newContact.company.length >= 3) {
         const response = await fetch(url, {
           method: "POST",
           mode: "cors",
@@ -91,8 +40,8 @@ function Contact() {
           },
           body: JSON.stringify({ name: newContact.name, email: newContact.email, number: newContact.number, company: newContact.company })
         })
+        console.log(response);
 
-        // console.log(response);
         setIsSuccess(true);
         setIsValid(true);
         let savedEmail = newContact.email;
@@ -112,28 +61,6 @@ function Contact() {
 
         console.log(response2)
 
-      // }
-      // else {
-      //   if(newContact.name.length < 3){
-      //     alert("Please Fill The Name Correctly. Name Should Be Atleast 3 Characters Long");
-      //   }
-      //   else if(!ValidateEmail(newContact.email)){
-      //     alert("Please Fill The Email Correctly")
-      //   }
-      //   else if(!phonenumber(newContact.number)){
-         
-      //     if(!isNaN(newContact.number)){
-      //        alert(`Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. Currently You Have Filled ${newContact.number.length} digits.`)
-      //     }
-      //     else{
-      //       alert('Please Fill Phone Number Correctly. Phone Number Must Be Only 10 Digits Long. It should not contain any Alphabets or Special Characters.')
-      //     }
-      //   }
-      //   else{
-      //     alert("Company Should Be Atleast 3 Characters Long")
-      //   }
-      // }
-
     } catch (error) {
       alert(`The Following Error Occured: ${error}.\nKindly Try Again!`)
       setNewContact({ name: '', email: '', number: '', company: '' });
@@ -141,28 +68,6 @@ function Contact() {
 
   };
 
-
-  // const handleValidate = (phoneNumber) => {
-  //   if (PHONE_REGEX.test(phoneNumber)) {
-  //     errors["phone-input"] && delete errors["phone-input"];
-  //     if (
-  //       phoneNumber.length === 10 &&
-  //       phoneNumber.startsWith("91")
-  //     ) {
-  //       // Valid Indian phone number
-  //       return true;
-  //     } else {
-  //       // Valid phone number (non-Indian)
-  //       return true;
-  //     }
-  //   } else {
-  //     errors["phone-input"] = {
-  //       type: "manual",
-  //       message: "Invalid phone number. Please try again."
-  //     };
-  //     return false;
-  //   }
-  // };
   return (
     <div id="aboutuspage" className="complete">
       <div className="abtus">
@@ -246,7 +151,6 @@ function Contact() {
           <p>Experience the Valsco Difference, Request a Consultation Today!</p>
         </div>
         <div  className="b-form" id="contactusrow2">
-          {/* <form onSubmit={handleFormSubmit}> */}
           <form method="POST" action={backendURL}>
             <div className="form-row">
               <label htmlFor="name">Name</label>
@@ -292,26 +196,6 @@ function Contact() {
                 pattern="^(?:\+91\d{10}|\d{10})$"
               />
                 <span className="inputSpan">Please Enter a Valid Phone Number</span>
-                {/* <Controller
-                  name="phoneInput" // Make sure this matches the name used in data.phoneInput
-                  control={control}
-                  rules={{
-                    validate: (value) => handleValidate(value)
-                  }}
-                  render={({ field: { onChange, value } }) => (
-                    <PhoneInput
-                      value={value}
-                      onChange={onChange}
-                      defaultCountry="IN"
-                      id="phone-input"
-                      className={errorMessage !== null ? "yt" : ""}
-                    />
-                  )}
-                />
-                {errorMessage && <p className="error-message">{errorMessage}</p>} */}
-                {/* {!!errors["phone-input"] && (
-                  <p style={{ color: "red" }}>{errors["phone-input"].message}</p>
-                )} */}
               </div>
             </div>
             <div className="form-row">
@@ -325,7 +209,7 @@ function Contact() {
                 placeholder="Your Company/Organisation"
                 name="company"
                 required
-                pattern="^[A-Za-z\s0-9]{3,100}$"
+                pattern="^[A-Za-z\s0-9.\+\$\*\\]{3,100}$"
               />
               <span className="inputSpan">Company Name Should be 3-50 Characters Long</span>
             </div>
@@ -335,7 +219,6 @@ function Contact() {
               id="formSubmitButton"
               onClick={handleFormSubmit}
               disabled={isValid}
-            // disabled={!!errors["phone-input"]}
             >
               Click to send your message
             </button>
