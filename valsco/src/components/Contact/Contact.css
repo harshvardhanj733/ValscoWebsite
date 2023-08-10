@@ -61,41 +61,54 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.abtus .info {
+.abtus .info{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+}
+.abtus .info .paragraph{
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+}
+.abtus .info .peoppara{
+  width: 60%;
+  margin-left: 20%;
+  height: 50%;
+}
+.abtus .info .people{
+  margin-top: 5%;
+  width: 60%;
+  margin-left: 20%;
+  /* margin-left: 20%; */
+  font-weight: 500;
+  font-family: sans-serif;
 }
 
 .abtus .info img {
-  order: -1; /* Move the image to the left */
-  width: 30%;
-  margin-right: 20px; /* Adjust the spacing between the image and text */
-  margin-left: 70px;
-  margin-bottom: 30px;
+  width: 50%;
+  height: 50%;
   box-shadow: 10px 20px 40px grey;
 }
 
-.abtus .info p1 {
-  margin-top: 5%;
-  color: black;
-  position: relative;
-  left: 14%;
-  font-size: large;
-  letter-spacing: 2px;
-  width: 80%;
-}
 
-.abtus .info p {
+/* .abtus .info p {
   position: relative;
   right: 11.5%;
   margin-top: 8%;
   width: 120%;
   height: 30%;
   color: black;
-}
-
-@media screen and (max-width: 768px) {
+} */
+/* .abtus .info .people{
+  margin-left: 20%;
+  margin-top: 6%;
+  font-weight: 500;
+  color: black;
+  font-size: larger;
+  font-family: sans-serif;
+} */
+/* @media screen and (max-width: 768px) {
   .abtus .info img {
     width: 50%;
     margin-left: 115px;
@@ -103,7 +116,7 @@ body {
   .abtus .info p {
     padding-left: 110px;
   }
-}
+} */
 
 .abtus .sep {
   color: hsla(191, 75%, 60%, 1);
@@ -148,7 +161,7 @@ body {
 }
 .cardu {
   width: 47%;
-  height: 30%;
+  height: 33%;
   margin-left: 21%;
   border-radius: 50%;
   transition: 0.2s;
@@ -445,9 +458,17 @@ $blueColor:rgba(33,150,243,1); */
 .b-form .yt .PhoneInputInput {
   border-bottom: 2px solid red;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 1005px) {
   .header {
     text-align: center;
+  }
+  .abtus .info img{
+    text-align: center;
+    align-items: center;
+    margin-left: 35%;
+  }
+  .abtus .info .people{
+    margin-top: 10%;
   }
   .abtus {
     display: flex;
@@ -465,9 +486,6 @@ $blueColor:rgba(33,150,243,1); */
     padding: 0px;
     width: 100%;
   }
-  .float-left {
-    margin-left: 205%;
-  }
   .info {
     display: flex;
     flex-direction: column;
@@ -476,47 +494,106 @@ $blueColor:rgba(33,150,243,1); */
   }
   .peoppara {
     text-align: center;
-    padding:0px;
+    width: fit-content;
   }
   .privacy p1 {
     font-size: 18px;
   }
-}
+} */
 
-@media screen and (max-width: 768px) {
-  .cardu {
-    height: 35%;
-  }
-  .card {
-    margin-left: 5%;
-  }
-  .peoppara {
+@media screen and (max-width: 1050px) {
+  /* .peoppara {
     text-align: center;
     padding:0px;
     margin: 20px;
+  } */
+  .abtus .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .abtus .info .paragraph{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .abtus .info p{
+    text-align: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 900px) {
+  /* .cardu {
+    height: 21%;
+  }
+  .car{
+    height: 32%;
+  }
+  .sp{
+    font-size: 0.8rem;
+  }
+  .ap{
+    font-size: 0.8rem;
+  }
+  .card{
+    height: 80vh;
+  }
+  .card-title{
+    font-size: 1rem;
+  }
+  .sap{
+    font-size: 0.8rem;
+  }
+  .cardui{
+    height: 58%;
+  } */
+  /* .card {
+    margin-left: 5%;
+  } */
+  /* .peoppara {
+    text-align: center;
+    padding:0px;
+    margin: 20px;
+  } */
   .abtus .info p {
     right: 20%;
   }
-  .card {
-    height: 400px;
+}
+@media screen and (min-width: 576px) and (max-width: 700px) {
+  /* .cardu{
+    height: 17%;
   }
+  .cardui{
+    height: 17%;
+  }
+  .car{
+    height: 17%;
+  } */
+}
+@media screen and (min-width: 700px) and (max-width: 760px) {
+  /* .cardu{
+    height: 30%;
+  }
+  .card{
+    height: 40vh;
+  } */
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+/* @media screen and (min-width: 769px) and (max-width: 1200px) {
   .cardu {
     height: 23%;
   }
-}
+} */
 
-@media screen and (min-width: 576px) and (max-width: 1000px) {
+/* @media screen and (min-width: 576px) and (max-width: 1000px) {
   .cardu {
     height: 20%;
   }
   .p-contact {
     width:70vw;
   }
-}
+} */
 
 .inputSpan{
   color: red;
@@ -556,6 +633,64 @@ input:focus:invalid{
     hsla(191, 75%, 60%, 1) 0%,
     hsla(248, 87%, 36%, 1) 100%
   );
+}
+/* Add this media query to adjust card alignment and image height */
+@media screen and (max-width: 768px) {
+  .car,
+  .cardui {
+    height: auto;
+  }
+  .cardu {
+    max-height: 20%;
+  }
+  .card-group {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .abtus .info .people{
+    margin-top: 10%;
+  }
+}
+
+/* Additional media queries for further responsiveness */
+@media screen and (max-width: 770px) {
+  /* .card-group {
+    margin: 5% auto;
+  } */
+  .card{
+    margin-left: 10%;
+  }
+  .card-body{
+    cursor: pointer;
+    box-shadow: 5px 5px 10px black;
+    transform: scale(1.02);
+  }
+  .sp {
+    opacity: 1;
+  }
+  .sap {
+    opacity: 1;
+  }
+  .ap {
+    opacity: 1;
+  }
+
+}
+
+/* @media screen and (min-width: 577px) and (max-width: 900px) {
+  .card {
+    margin: 5% auto;
+    width: 90%;
+  }
+} */
+
+/* Adjust other styles as needed */
+@media screen and (min-width: 771px) and (max-width: 1006px) {
+    .abtus .info p1{
+      width: 100%;
+      font-size: 0.8rem;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 800px) {
   .form{

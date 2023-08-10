@@ -74,12 +74,10 @@ function Contact() {
         <div className="header">
           <h1>WHO WE ARE</h1>
         </div>
-        <div className="content">
-          <p>We excel in creating personalized software solutions designed to cater specifically to our clients' individual requirements. We recognize that committing to software investments is a significant choice for any business.</p>
-        </div>
         <div className="info">
-          <img src={require("../../components/images/abt.jpeg")} className="float-left" alt="y" />
-          <p1>OUR PEOPLE COME FIRST</p1><br></br>
+          <img src={require("../../components/images/abt.jpeg")} alt="y" />
+          <div classname="paragraph">
+          <p className="people">OUR PEOPLE COME FIRST</p><br></br>
           <p className="peoppara">Valsco specializes in developing custom software solutions that are tailored to meet the
             unique needs of the clients. We understand that investing in software solutions is a big
             decision for any business. That is why we offer a comprehensive range of services that
@@ -95,12 +93,13 @@ function Contact() {
             Our team of experienced developers, designers, and project managers work closely with
             our clients to ensure that their software solutions are not only user-friendly, but also
             efficient and effective.</p>
+            </div>
         </div>
       </div>
       <div className="App">
         <div className="card-group" id="aboutus">
           <div className="card">
-            <img src={require("../../components/images/i2.jpg")} className="cardu" alt="y" />
+            <img src={require("../../components/images/newi2.jpeg")} className="car" alt="y" />
             <div className="card-body">
               <h5 className="card-title">Ayan Bhowal</h5>
               <p className="card-text">
@@ -110,7 +109,7 @@ function Contact() {
             </div>
           </div>
           <div className="card">
-            <img src={require("../../components/images/i11.jpg")} className="car" alt="tp" />
+            <img src={require("../../components/images/newi11.jpeg")} className="car" alt="tp" />
             <div className="card-body">
               <h5 className="card-title">Sanidhya Agarwal</h5>
               <p className="card-text">
@@ -120,7 +119,7 @@ function Contact() {
             </div>
           </div>
           <div className="card">
-            <img src={require("../../components/images/i32.jpg")} className="cardui" alt="p" />
+            <img src={require("../../components/images/newi32.jpeg")} className="car" alt="p" />
             <div className="card-body">
               <h5 className="card-title">Srishti Jain</h5>
               <p className="card-text">
