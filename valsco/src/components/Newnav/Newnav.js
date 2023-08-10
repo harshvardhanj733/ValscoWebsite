@@ -17,7 +17,7 @@ function App() {
     <span className="fa fa-bars" aria-hidden="true"></span>
   </a>
   <img src={require("./logooo.png")} id="tl" alt="Logo" />
-  <h1 className="logo">Valsco Technology</h1>
+  <h1 className="logo">VALSCO TECHNOLOGY</h1>
   <nav id="main-menu" className="main-menu" aria-label="Main menu" >
     <a href="#main-menu-toggle"
        id="main-menu-close"

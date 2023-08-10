@@ -32,34 +32,34 @@ function Contact() {
       newContact.name = newContact.name.trim();
       newContact.email = newContact.email.trim();
       newContact.company = newContact.company.trim();
-        const response = await fetch(url, {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            'Content-Type': "application/json"
-          },
-          body: JSON.stringify({ name: newContact.name, email: newContact.email, number: newContact.number, company: newContact.company })
-        })
-        console.log(response);
+      const response = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          'Content-Type': "application/json"
+        },
+        body: JSON.stringify({ name: newContact.name, email: newContact.email, number: newContact.number, company: newContact.company })
+      })
+      console.log(response);
 
-        setIsSuccess(true);
-        setIsValid(true);
-        let savedEmail = newContact.email;
-        let savedName = newContact.name;
-        setTimeout(() => {
-          setIsSuccess(false);
-          setNewContact({ name: '', email: '', number: '', company: '' });
-        }, 3000);
-        const response2 = await fetch(backendURL, {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            'Content-Type': "application/json"
-          },
-          body: JSON.stringify({ name:savedName, email: savedEmail })
-        })
+      setIsSuccess(true);
+      setIsValid(true);
+      let savedEmail = newContact.email;
+      let savedName = newContact.name;
+      setTimeout(() => {
+        setIsSuccess(false);
+        setNewContact({ name: '', email: '', number: '', company: '' });
+      }, 3000);
+      const response2 = await fetch(backendURL, {
+        method: "POST",
+        mode: "cors",
+        headers: {
+          'Content-Type': "application/json"
+        },
+        body: JSON.stringify({ name: savedName, email: savedEmail })
+      })
 
-        console.log(response2)
+      console.log(response2)
 
     } catch (error) {
       alert(`The Following Error Occured: ${error}.\nKindly Try Again!`)
@@ -77,23 +77,23 @@ function Contact() {
         <div className="info">
           <img src={require("../../components/images/abt.jpeg")} alt="y" />
           <div classname="paragraph">
-          <p className="people">OUR PEOPLE COME FIRST</p><br></br>
-          <p className="peoppara">Valsco specializes in developing custom software solutions that are tailored to meet the
-            unique needs of the clients. We understand that investing in software solutions is a big
-            decision for any business. That is why we offer a comprehensive range of services that
-            go beyond just software development. Our consulting, training, and support services are
-            designed to ensure that our clients can get the most out of their needs and visions.
-            Valsco focuses on innovation and development. This involves constantly exploring new
-            technologies, methods, and processes to create software solutions that are more
-            efficient, effective, and user-friendly.
-            In addition to innovation, we as a company also focus on improving its products,
-            processes, and services. This involves regularly evaluating the effectiveness of existing
-            solutions and identifying areas for improvement. Continuous improvement ensures that
-            our company is always of the highest quality and offers maximum value to customers.
-            Our team of experienced developers, designers, and project managers work closely with
-            our clients to ensure that their software solutions are not only user-friendly, but also
-            efficient and effective.</p>
-            </div>
+            <p className="people">OUR PEOPLE COME FIRST</p><br></br>
+            <p className="peoppara">Valsco specializes in developing custom software solutions that are tailored to meet the
+              unique needs of the clients. We understand that investing in software solutions is a big
+              decision for any business. That is why we offer a comprehensive range of services that
+              go beyond just software development. Our consulting, training, and support services are
+              designed to ensure that our clients can get the most out of their needs and visions.
+              Valsco focuses on innovation and development. This involves constantly exploring new
+              technologies, methods, and processes to create software solutions that are more
+              efficient, effective, and user-friendly.
+              In addition to innovation, we as a company also focus on improving its products,
+              processes, and services. This involves regularly evaluating the effectiveness of existing
+              solutions and identifying areas for improvement. Continuous improvement ensures that
+              our company is always of the highest quality and offers maximum value to customers.
+              Our team of experienced developers, designers, and project managers work closely with
+              our clients to ensure that their software solutions are not only user-friendly, but also
+              efficient and effective.</p>
+          </div>
         </div>
       </div>
       <div className="App">
@@ -149,7 +149,7 @@ function Contact() {
           <br />
           <p>Experience the Valsco Difference, Request a Consultation Today!</p>
         </div>
-        <div  className="b-form" id="contactusrow2">
+        <div className="b-form" id="contactusrow2">
           <form method="POST" action={backendURL}>
             <div className="form-row">
               <label htmlFor="name">Name</label>
@@ -184,16 +184,16 @@ function Contact() {
               <div>
                 <label htmlFor="number">Phone Number</label>
                 <input
-                type="tel"
-                className="form-control"
-                id="number"
-                onChange={handleOnChange}
-                value={newContact.number}
-                placeholder="Your Phone Number"
-                name="number"
-                required
-                pattern="^(?:\+91\d{10}|\d{10})$"
-              />
+                  type="tel"
+                  className="form-control"
+                  id="number"
+                  onChange={handleOnChange}
+                  value={newContact.number}
+                  placeholder="Your Phone Number"
+                  name="number"
+                  required
+                  pattern="^(?:\+91\d{10}|\d{10})$"
+                />
                 <span className="inputSpan">Please Enter a Valid Phone Number</span>
               </div>
             </div>
@@ -221,7 +221,7 @@ function Contact() {
             >
               Click to send your message
             </button>
-            {isSuccess&&<div id="successfulMessage">Your Message Sent Successfully!</div>}
+            {isSuccess && <div id="successfulMessage">Your Message Sent Successfully!</div>}
           </form>
         </div>
       </div>
@@ -229,7 +229,7 @@ function Contact() {
         <h1 id="ide">Have an Idea?</h1>
         <h1 id="tell">Tell us about It!</h1>
         <div className="privacy">
-          <p1>valscotech@gmail.com</p1>
+          <p1>connect@valscotech.com</p1>
           <p2>J-3 SHAHABDI ENCLAVE</p2>
           <p2>NOIDA, UTTAR PRADESH 201301</p2>
           <p4>Privacy Policy</p4>
