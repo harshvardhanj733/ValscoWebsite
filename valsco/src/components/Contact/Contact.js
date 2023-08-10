@@ -108,17 +108,17 @@ function Contact() {
               <p className="ap">Ayan Bhowal is our approachable, dependable, and vastly talented Director. With his composed and collected demeanor and persistent drive, Valsco is positioned to prosper and thrive.</p>
             </div>
           </div>
-          <div className="card">
+          <div className="card" id="sac">
             <img src={require("../../components/images/newi11.jpeg")} className="car" alt="tp" />
             <div className="card-body">
               <h5 className="card-title">Sanidhya Agarwal</h5>
               <p className="card-text">
                 Founder
               </p>
-              <p className="sap">Sanidhya Agarwal, our Managing Director, has amazing leadership qualities and a very advanced and holistic vision for Valsco. With his keen eye for detall and strive for perfection, he Is the perfect captain of the Valsco ship.</p>
+              <p className="sap">Sanidhya Agarwal, our Managing Director, has amazing leadership qualities and a very advanced and holistic vision for Valsco. With his keen eye for detall and strive for perfection.</p>
             </div>
           </div>
-          <div className="card">
+          <div className="card" id="shc">
             <img src={require("../../components/images/newi32.jpeg")} className="car" alt="p" />
             <div className="card-body">
               <h5 className="card-title">Srishti Jain</h5>
