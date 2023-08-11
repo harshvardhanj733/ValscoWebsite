@@ -131,10 +131,12 @@ function Contact() {
         </div>
       </div>
       <div id="contactuspage" className="form">
+        <div className="titl">
         <h1>FUEL.</h1>
         <h1>ELEVATE.</h1>
         <h1>IGNITE YOUR</h1>
         <h1>SW SOLUTIONS.</h1>
+        </div>
         <div className="p-contact">
           <p>
             "Ready to take your business to the next level?" Contact us today
@@ -224,8 +226,7 @@ function Contact() {
             {isSuccess && <div id="successfulMessage">Your Message Sent Successfully!</div>}
           </form>
         </div>
-      </div>
-      <div className="bottom">
+        <div className="bottom">
         <h1 id="ide">Have an Idea?</h1>
         <h1 id="tell">Tell us about It!</h1>
         <div className="privacy">
@@ -250,8 +251,8 @@ function Contact() {
           </div>
         </div>
       </div>
+      </div>
     </div>
-
   );
 }
 

@@ -213,18 +213,20 @@ body {
 .bottom {
   background-color: black;
   color: silver;
+  margin-top: 4%;
 }
 #ide {
   margin-top: 0%;
-  font-weight: 350;
+  font-weight: 150;
 }
 #tell {
   font-weight: 10;
 }
-.bottom h1 {
+.form .bottom h1 {
   margin-top: 4%;
   margin-left: 5%;
   font-size: 5vw;
+  font-weight: 150;
   margin-right: 58%;
 }
 .bottom h1 {
@@ -279,7 +281,7 @@ body {
   padding-top: 5%;
   /* padding-bottom: 5%; */
 }
-.form h1 {
+.form .titl h1 {
   margin-left: 5%;
   font-size: 8vw;
   font-family: sans-serif;
