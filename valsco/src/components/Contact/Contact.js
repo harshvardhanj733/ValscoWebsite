@@ -5,7 +5,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import validator from 'validator';
 
-const backendURL = "http://localhost:5000";
+const backendURL = "https://valscobackendtest.onrender.com";
 
 const PHONE_REGEX = new RegExp(
   /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,3}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/
@@ -132,10 +132,10 @@ function Contact() {
       </div>
       <div id="contactuspage" className="form">
         <div className="titl">
-        <h1>FUEL.</h1>
-        <h1>ELEVATE.</h1>
-        <h1>IGNITE YOUR</h1>
-        <h1>SW SOLUTIONS.</h1>
+          <h1>FUEL.</h1>
+          <h1>ELEVATE.</h1>
+          <h1>IGNITE YOUR</h1>
+          <h1>SW SOLUTIONS.</h1>
         </div>
         <div className="p-contact">
           <p>
@@ -227,30 +227,30 @@ function Contact() {
           </form>
         </div>
         <div className="bottom">
-        <h1 id="ide">Have an Idea?</h1>
-        <h1 id="tell">Tell us about It!</h1>
-        <div className="privacy">
-          <p1>connect@valscotech.com</p1>
-          <p2>J-3 SHAHABDI ENCLAVE</p2>
-          <p2>NOIDA, UTTAR PRADESH 201301</p2>
-          <p4>Privacy Policy</p4>
-        </div>
-      </div>
-      <div className="foot">
-        <div className="f">
-          <div className="flex-center">
-            <i className="fa fa-github fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            <i className="fa fa-twitter fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            <i className="fa fa-facebook fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            <a href="https://instagram.com/vals.co_tech?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-instagram fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            </a>
-            <a href="https://www.linkedin.com/company/valscotech/?fbclid=PAAaZ3ATa670NzIC1DB7OLSwzO9bOqISugzSF9Bs-sWUJjBBKLuYvnkm-qUJw" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-linkedin fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
-            </a>
+          <h1 id="ide">Have an Idea?</h1>
+          <h1 id="tell">Tell us about It!</h1>
+          <div className="privacy">
+            <p1>connect@valscotech.com</p1>
+            <p2>J-3 SHAHABDI ENCLAVE</p2>
+            <p2>NOIDA, UTTAR PRADESH 201301</p2>
+            <p4>Privacy Policy</p4>
           </div>
         </div>
-      </div>
+        <div className="foot">
+          <div className="f">
+            <div className="flex-center">
+              <i className="fa fa-github fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+              <i className="fa fa-twitter fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+              <i className="fa fa-facebook fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+              <a href="https://instagram.com/vals.co_tech?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-instagram fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+              </a>
+              <a href="https://www.linkedin.com/company/valscotech/?fbclid=PAAaZ3ATa670NzIC1DB7OLSwzO9bOqISugzSF9Bs-sWUJjBBKLuYvnkm-qUJw" target="_blank" rel="noopener noreferrer">
+                <i className="fa fa-linkedin fa-4x icon-3d" style={{ fontSize: '48px' }}></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
