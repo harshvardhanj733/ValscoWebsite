@@ -654,7 +654,28 @@ input:focus:invalid{
     margin-top: 10%;
   }
 }
-
+@media screen and (max-width: 769px){
+   .bottom .privacy p1{
+      font-size: larger;
+   }
+   #formSubmitButton{
+      font-size: 2.5vw;
+   }
+   .form .p-contact {
+      width: 85%;
+   }
+   .bottom #ide{
+    width: 50%;
+    font-size: x-large;
+   }
+   .bottom #tell{
+    width: 50%;
+    font-size: x-large;
+   }
+   .bottom .privacy p4{
+      font-size:x-small;
+   }
+} 
 /* Additional media queries for further responsiveness */
 @media screen and (max-width: 576px) {
   /* .card-group {
