@@ -3,8 +3,8 @@ const app = express()
 const transporter = require('./email')
 require('dotenv').config();
 const cors = require('cors')
-let port = 5000;
-let url = 'http://localhost:3000'
+let port = process.env.PORT || 5000;
+let url = 'https://valscotech.com/'
 
 
 app.use(express.json());
