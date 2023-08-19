@@ -619,6 +619,11 @@ input:focus:invalid{
   color: green;
 }
 
+.bottom .privacy p1 a{
+  text-decoration: none;
+  color: silver;
+}
+
 #formSubmitButton{
   background: hsla(191, 75%, 60%, 1);
   color: #fff;

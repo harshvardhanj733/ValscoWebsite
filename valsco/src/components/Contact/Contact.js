@@ -231,7 +231,7 @@ function Contact() {
           <h1 id="ide">Have an Idea?</h1>
           <h1 id="tell">Tell us about It!</h1>
           <div className="privacy">
-            <p1>connect@valscotech.com</p1>
+            <p1><a href="mailto:connect@valscotech.com">connect@valscotech.com</a></p1>
             <p2>J-3 SHAHABDI ENCLAVE</p2>
             <p2>NOIDA, UTTAR PRADESH 201301</p2>
             <p4>Privacy Policy</p4>
