@@ -93,6 +93,7 @@ function Contact() {
               Our team of experienced developers, designers, and project managers work closely with
               our clients to ensure that their software solutions are not only user-friendly, but also
               efficient and effective.</p>
+            <p className="mobile">At Valsco , we specialize in crafting custom software solutions tailored to our clients' unique needs. Our services extend beyond development, encompassing consulting, training, and support to ensure our clients achieve their visions. Innovation is our hallmark, as we continuously explore new technologies to create efficient, user-friendly solutions. With a team of experienced developers, designers, and project managers, we excel in website development, mobile applications, personalized software, and more. Our commitment to improvement guarantees high-quality solutions that deliver maximum value.</p>
           </div>
         </div>
       </div>

@@ -102,13 +102,16 @@ background: -webkit-linear-gradient(
   
   .para p {
     width:50vw;
-    margin-top: 10px;
   }
   
   .main{
     display: flex;
     flex-direction: column; 
-    gap:5rem;
+    gap:1rem;
+  }
+
+  .front .para p{
+    margin-top: 0%;
   }
   
 }
