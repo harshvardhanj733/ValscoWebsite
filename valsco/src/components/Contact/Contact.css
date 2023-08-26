@@ -264,6 +264,28 @@ body {
   margin-left: 5%;
   display: grid;
 }
+.bottom .privacy a[href="mailto:connect@valscotech.com"] {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bottom .privacy a[href="mailto:connect@valscotech.com"]::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: silver; 
+  transition: width 1s ease-in-out; 
+  line-height: 2px;
+}
+
+.bottom .privacy a[href="mailto:connect@valscotech.com"]:hover::before {
+  width: 100%;
+}
+
 .bottom p4 {
   margin-top: 4%;
   font-size: 1vw;
