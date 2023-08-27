@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import "./LoadingPage.css"
 import LandingPage from "../Landing/LandingPage"
 
+
 export const LoadingPage = () => {
   const [isLoadingComplete, setIsLoadingComplete] = useState(false)
 
@@ -38,7 +39,7 @@ export const LoadingPage = () => {
       showNext()
       setTimeout(() => {
         setIsLoadingComplete(true)
-      }, 2000)
+      }, 3500)
     }
 
     setTimeout(boxNone, 820)
@@ -47,9 +48,10 @@ export const LoadingPage = () => {
   }, [])
 
   return (
+    <>
     <div>
       {!isLoadingComplete ? (
-        <>
+        <div className="plan">
           <div className="box">
             <video src="tv.mp3"></video>
           </div>
@@ -61,10 +63,12 @@ export const LoadingPage = () => {
             <span className="hide">C</span>
             <span className="hide">O</span>
           </div>
-        </>
+        </div>
       ) : (
         <LandingPage className={isLoadingComplete ? "show" : "hide"} />
       )}
     </div>
+    
+    </>
   )
 }

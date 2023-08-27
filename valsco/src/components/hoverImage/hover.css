@@ -1,0 +1,17 @@
+.softimage{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border-radius:10px;
+    background-image: url('./bgimgvalsco.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 768px) {
+    .softimage{
+        width:100%;
+        height:50vh;
+    }
+}
+
