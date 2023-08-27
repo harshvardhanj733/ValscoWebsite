@@ -89,6 +89,7 @@ body {
   width: 50%;
   height: 50%;
   box-shadow: 10px 20px 40px grey;
+  margin-left: 40px;
 }
 
 .mobile{
@@ -548,7 +549,12 @@ $blueColor:rgba(33,150,243,1); */
     margin-top: 5%;
   }
   .abtus .info p{
-    text-align: center;
+    
+    padding-left:10px;
+    padding-right:7px;
+   
+   text-align: justify;
+    
   }
 }
 @media screen and (min-width: 576px) and (max-width: 900px) {
@@ -684,6 +690,12 @@ input:focus:invalid{
   .abtus .info .people{
     margin-top: 10%;
   }
+
+  .abtus .info img {
+    
+    margin-left: 0px;
+  }
+  
 }
 @media screen and (max-width: 769px){
    .peoppara{
