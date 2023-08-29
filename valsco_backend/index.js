@@ -4,14 +4,17 @@ const transporter = require('./email')
 require('dotenv').config();
 const cors = require('cors')
 let port = process.env.PORT || 5000;
-let url = 'https://valscotech.com/'
+// let url = 'https://valscotech.com'
+// let port = 5000;
+// let url = 'http://localhost:3000/'
 
 
 app.use(express.json());
-app.use(cors({
-    origin: url,
-}));
+// app.use(cors({
+//     origin: url,
+// }));
 
+app.use(cors());
 app.post('/', async (req, res) => {
     try {
         const { name, email } = req.body;

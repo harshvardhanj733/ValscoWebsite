@@ -30,11 +30,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<>{!isLoadingComplete ? (<LoadingPage />) : (<><div><Newnav/><LandingPage></LandingPage><Hoverimage/><ProductsPage /><Slider authenticated={authenticated} /><Contact /> </div></>)}</>}/>
         <Route path="/BlogHome" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><BlogHome authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
         <Route path="/CreateBlog" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><CreateBlog authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
         <Route path="/Login" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Login setAuthenticated={setAuthenticated} authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
         <Route path="/DetailedBlog/:ID" element={<><Navbar authenticated={authenticated} setAuthenticated={setAuthenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><Alert alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/><DetailedBlog authenticated={authenticated} alertMsg={alertMsg} setAlertMsg={setAlertMsg} alertColor={alertColor} setAlertColor={setAlertColor}/></>}/>
+        <Route path="/" element={<>{!isLoadingComplete ? (<LoadingPage />) : (<><div><Newnav/><LandingPage></LandingPage><Hoverimage/><ProductsPage /><Slider authenticated={authenticated} /><Contact /> </div></>)}</>}/>
       </Routes>
     </Router>
   );

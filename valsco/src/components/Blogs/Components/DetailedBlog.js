@@ -66,8 +66,9 @@ const DetailedBlog = (props) => {
   return (
     <>
       <Helmet>
-        <title>Detailed Blog | VALSCO - {title}</title>
+        <title>Detailed Blog VALSCO</title>
         <meta name="description" content={postText} />
+        <link rel="icon" type="image/png" href="%PUBLIC_URL%/faviconValsco.png?v=2" />
       </Helmet>
       <section className="detailed-blog">
         <h1 className="detailed-blog-title">{title}</h1>

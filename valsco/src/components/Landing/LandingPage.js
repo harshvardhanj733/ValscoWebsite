@@ -30,7 +30,7 @@ function LandingPage() {
           <div className="para">
             <span>VALSCO</span>
             <p>
-              Our company provides software products and services to businesses
+              Our company provides software products and services to businesses and
               individuals to help them meet their software needs. We strive to
               specialize in developing software solutions tailored to the unique
               needs of our clients.

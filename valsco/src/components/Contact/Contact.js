@@ -7,7 +7,7 @@ import validator from "validator";
 import { Helmet } from "react-helmet-async";
 
 const backendURL = "https://valscobackendtest.onrender.com";
-// const backendURL = "http://localhost:5000"
+// const backendURL = "http://localhost:5000";
 
 const PHONE_REGEX = new RegExp(
   /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{1,3}[-\s\.]?[0-9]{1,4}[-\s\.]?[0-9]{1,4}$/
